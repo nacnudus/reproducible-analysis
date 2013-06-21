@@ -1,0 +1,14 @@
+reproducible-analysis
+=====================
+
+All about reproducible analysis using the R stack (R/RStudio/Markdown/Latex/Knitr/Beamer/Slidy/Shiny/etc.)
+
+Outline
+-------
+
+### R
+R is a statistical programming language.  It's like Excel would be if all you could see were the formulae in each cell.
+
+Excel: cell-value = SUM(1, 2, 3)
+  
+R: my.variable = sum(1, 2, 3)
