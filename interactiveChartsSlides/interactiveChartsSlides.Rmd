@@ -1,0 +1,25 @@
+---
+title       : Interactive Charts on Slides 
+subtitle    : with rCharts and slidify
+author      : Duncan Garmonsway
+job         : Performance & Information Analyst, Road Policing Support, NZ Police
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+ext_widgets     : {rCharts: ["libraries/highcharts", "libraries/nvd3", "libraries/morris"]}           # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+---
+
+## Graph 1
+
+```{r setup, message = F, echo = F, cache = F}
+require(rCharts)
+knitr::opts_chunk$set(comment = NA, results = 'asis', tidy = F, message = T)
+```
+
+
+```{r chart1, echo=FALSE}
+hair_eye_male <- subset(as.data.frame(HairEyeColor), Sex == "Male")
+n1 <- nPlot(Freq ~ Hair, group = "Eye", data = hair_eye_male, type = "multiBarChart")
+n1$print("chart3")
+```
