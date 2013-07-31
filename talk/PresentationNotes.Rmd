@@ -3,6 +3,17 @@ reproducible-analysis
 
 Reproducible analysis using the R stack (R/RStudio/Markdown/Latex/Knitr/Beamer/Slidy/Shiny/etc.)
 
+Define objective
+Use entertaining examples
+Think of what your audience knows (excel, BO, CAS)
+Flatter them (we do this stuff every day, we need a car like a rally driver)
+Impress them (professors write the software, forecast is better than you are)
+Let the examples do the impressing, not your opinions
+Follow LCFD -- compare with Excel, BO
+Make problem look tedious in Excel, BO, easy in R
+Use recent Stackoverflow question -- developer responded!
+Use random first slide, then explain later.
+
 Outline
 -------
 The Problem - show a blank slide and let the mouse do the work.

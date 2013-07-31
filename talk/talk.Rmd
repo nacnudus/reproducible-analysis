@@ -3,6 +3,8 @@ opts_chunk$set(tidy = FALSE) # preserve wrapped code
 opts_chunk$set(dev = 'pdf') # size plots better
 require(plyr)
 require(ggplot2)
+require(rdatamarket)
+require(forecast)
 ```
 
 # Introduction
@@ -81,6 +83,61 @@ head(rbi)
 ### Basic Plots
 ```{r meanRbiByYear, fig.width = 4, fig.height = 2.25, fig.cap = "mean rbi by year"}
 qplot(year, mean_rbi, data = rbi, geom = "line")
+```
+
+### Difficult Timeseries
+```{r setupBeer, include = FALSE}
+dminit("4b3320aa36214e35a7d0c6c175a1ff98")
+a <- dmlist("22ry")
+a$year <- as.numeric(substr(as.character(a$Quarter), 1, 4))
+b <- ddply(a, .(year), function(x) sum(x$Value))[1:38, ]
+p <- ggplot() + xlim(range(b$year)) + ylim(range(b$V1)) + geom_line(data = b[1:34, ], aes(year, V1))
+```
+
+```{r BeerInvisible, echo = FALSE, fig.width = 4, fig.height = 2.5, fig.cap = ""}
+p
+```
+
+### Difficult Timeseries
+```{r setupBeer, include = FALSE}
+# beer production
+dminit("4b3320aa36214e35a7d0c6c175a1ff98") # rdatamarket api key
+beer <- dmlist("22ry") # download
+beer$Year <- as.numeric(substr(as.character(beer$Quarter), 1, 4)) # extract year from quarter
+annual <- ddply(beer[1:152, ], .(Year), summarize, Production = sum(Value)) # summarize by year
+# forecast with forecast package
+goodForecast <- forecast(as.ts(annual[1:34, "Production"]), h = 4)
+goodForecast <- data.frame(Year = seq(1990, 1993), Production = goodForecast$mean) # df for ggplot
+# forecast with simple regression
+production <- annual[1:34, "Production"]
+year <- annual[1:34, "Year"]
+poorForecast <- lm(production ~ year) 
+pred <- predict(poorForecast, data.frame(year = seq(1990, 1993))) # four-year forecast
+poorForecast <- data.frame(Year = c(poorForecast$model$year, seq(1990, 1993))
+                           , Production <- c(poorForecast$fitted.values, pred))
+# preapre plot (plain data to begin with)
+p <- ggplot() + xlim(range(annual$Year)) + 
+  ylim(range(c(annual$Production, goodForecast$Production, poorForecast$Production))) + 
+  geom_line(data = annual[1:34, ], aes(Year, Production)) + 
+  theme(legend.position="none")
+```
+
+```{r BeerInvisible, echo = FALSE, fig.width = 4, fig.height = 3, fig.cap = ""}
+p
+```
+
+### Difficult Timeseries
+```{r BeerInvisible, echo = FALSE, fig.width = 4, fig.height = 3, fig.cap = "Australian annual beer production"}
+p
+```
+
+```{r BeerForecast, echo = FALSE, fig.width = 4, fig.height = 3, fig.cap = ""}
+p <- p + geom_line(aes(Year, Production),  poorForecast, colour = "red")
+p
+p <- p + geom_line(aes(Year, Production), goodForecast, colour = "blue")
+p
+p <- p + geom_line(aes(Year, Production), annual[34:38, ], colour = "orange")
+p
 ```
 
 ### Links
