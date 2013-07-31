@@ -1,0 +1,7 @@
+reproducible-analysis
+=====================
+
+Reproducible analysis using the R stack (R/RStudio/Markdown/Latex/Knitr/Beamer/Slidy/Shiny/etc.)
+
+---
+
