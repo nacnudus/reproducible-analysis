@@ -1,5 +1,6 @@
 \documentclass[t]{beamer}  
-\usetheme{Goettingen}                 
+\usetheme{Goettingen}
+\usecolortheme{sidebartab}
 \setbeamertemplate{navigation symbols}{}
 \title{Reproducible analysis using the R stack}
 \subtitle{R/RStudio/Markdown/Latex/Knitr/Beamer/Slidy/Shiny}
@@ -42,12 +43,6 @@
 \newcommand{\RegionMarkerTok}[1]{{#1}}
 \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
 \newcommand{\NormalTok}[1]{{#1}}
-% Redefine labelwidth for lists; otherwise, the enumerate package will cause
-% markers to extend beyond the left margin.
-\makeatletter\AtBeginDocument{%
-  \renewcommand{\@listi}
-    {\setlength{\labelwidth}{4em}}
-}\makeatother
 \usepackage{enumerate}
 \usepackage{url}
 
