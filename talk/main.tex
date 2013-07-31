@@ -1,12 +1,11 @@
 \documentclass[t]{beamer}  
 \usetheme{Goettingen}                 
-\usecolortheme{sidebartab}
 \setbeamertemplate{navigation symbols}{}
 \title{Reproducible analysis using the R stack}
-\subtitle{R/RStudio/Markdown/Latex/Knitr/Beamer/Slidy/Shiny/etc.}
+\subtitle{R/RStudio/Markdown/Latex/Knitr/Beamer/Slidy/Shiny}
 \author{Duncan Garmonsway}
-\institute{Road Policing Support, NZ Police}
-\date{\@date}
+\institute{Road Policing Support -- NZ Police}
+\date{\today}
 
 % enables straight single quote
 \makeatletter
@@ -28,14 +27,14 @@
 \titlepage
 \end{frame}
 
-% table of contents
+% contents page
 \begin{frame}
 \frametitle{Outline}
 \tableofcontents
 \end{frame}
 
-% rest of slides generated from Rmd
-\input{"talk2.tex"}
+% slides from talk.md
+\input{"talk.tex"}
 
 \end{document}
 
