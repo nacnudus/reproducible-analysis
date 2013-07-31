@@ -28,11 +28,11 @@ n1$print("chart3")
     subtitle    : with rCharts and slidify
     author      : Duncan Garmonsway
     job         : Performance & Information Analyst, Road Policing Support, NZ Police
-    framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
-    highlighter : highlight.js  # {highlight.js, prettify, highlight}
-    hitheme     : default      # 
-    ext_widgets : {rCharts: ["libraries/highcharts", "libraries/nvd3", "libraries/morris"]} # {mathjax, quiz, bootstrap}
-    mode        : selfcontained # {standalone, draft}
+    framework   : io2012
+    highlighter : highlight.js
+    hitheme     : default
+    ext_widgets : {rCharts: ["libraries/highcharts", "libraries/nvd3", "libraries/morris"]}
+    mode        : selfcontained
     ---
 
 ---
