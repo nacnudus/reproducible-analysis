@@ -15,3 +15,8 @@ Interactive charts on html5 slides using rCharts and slidify from [gist](https:/
 require(devtools)
 install_github(c("slidify", "slidifyLibraries"), "ramnathv", ref = "dev")
 ```
+
+Example:
+```
+git clone https://github.com/jeromyanglim/rmarkdown-rmeetup-2012.git
+```

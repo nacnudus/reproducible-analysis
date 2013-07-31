@@ -1,0 +1,41 @@
+\documentclass[t]{beamer}  
+\usetheme{Goettingen}                 
+\usecolortheme{sidebartab}
+\setbeamertemplate{navigation symbols}{}
+\title{Reproducible analysis using the R stack}
+\subtitle{R/RStudio/Markdown/Latex/Knitr/Beamer/Slidy/Shiny/etc.}
+\author{Duncan Garmonsway}
+\institute{Road Policing Support, NZ Police}
+\date{\@date}
+
+% enables straight single quote
+\makeatletter
+\let \@sverbatim \@verbatim
+\def \@verbatim {\@sverbatim \verbatimplus}
+{\catcode`'=13 \gdef \verbatimplus{\catcode`'=13 \chardef '=13 }} 
+\makeatother
+
+% enables backticks in verbatim
+\makeatletter
+{\catcode`\`=13
+\xdef\@verbatim{\unexpanded\expandafter{\@verbatim}\chardef\noexpand`=18 }
+}
+\makeatother
+
+% title page
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+
+% table of contents
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+% rest of slides generated from Rmd
+\input{"talk2.tex"}
+
+\end{document}
+
