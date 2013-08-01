@@ -14,6 +14,18 @@ Make problem look tedious in Excel, BO, easy in R
 Use recent Stackoverflow question -- developer responded!
 Use random first slide, then explain later.
 
+Contributors
+------------
+* `forecast`: Rob Hyndman, professor of statistics at Monash University, Melbourne
+* `knitr`: Yihui Xie, fourth-year statistics PhD at Iowa State University
+* `ggplot2` & `plyr`: Hadley Wickham, associate professor of statistics at Rice University
+
+Is R haRd?
+----------
+Excel: `cell-value = SUM(1, 2, 3)`
+  
+R: `myVariable = sum(1, 2, 3)`
+
 Outline
 -------
 The Problem - show a blank slide and let the mouse do the work.
@@ -39,6 +51,3 @@ Do simplest possible interactive graph that isn't remotely possible in Excel.
 ### R
 R is a statistical programming language.  It's like Excel would be if all you could see were the formulae in each cell.
 
-Excel: `cell-value = SUM(1, 2, 3)`
-  
-R: `myVariable = sum(1, 2, 3)`
