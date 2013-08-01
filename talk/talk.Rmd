@@ -1,6 +1,7 @@
 ```{r setup, include=FALSE}
 opts_chunk$set(tidy = FALSE) # preserve wrapped code
 opts_chunk$set(dev = 'pdf') # size plots better
+opts_chunk$set(fig.cap = "")
 require(plyr)
 require(ggplot2)
 require(rdatamarket)
@@ -51,8 +52,10 @@ require(forecast)
 ### Open Source
 * Documentation
 * Support
-  
 * Extensibility
+
+### Support
+"The third problem in your code is, you are print()ing plots from R base graphics. Sigh. Printing base graphics does not make any sense."
 
 ### Workflow
 LCFD -- Least Commonly Fouled-up Data
@@ -104,18 +107,18 @@ qplot(year, mean_rbi, data = rbi, geom = "line") +
 
 ### Easy Timeseries
 
-```{r gas, echo = FALSE, fig.width = 4, fig.height = 3.5, fig.cap = "", cache = TRUE}
+```{r gas, echo = FALSE, fig.width = 4, fig.height = 3.5, cache = TRUE}
 plot(forecast(gas), main = "Australian monthly gas production")
 ```
 
 ### Easy Timeseries
 
-```{r gasDecompose, echo = FALSE, fig.width = 4, fig.height = 3.5, fig.cap = "", cache = TRUE}
+```{r gasDecompose, echo = FALSE, fig.width = 4, fig.height = 3.5, cache = TRUE}
 plot(stl(gas, "periodic"))
 ```
 
 ### Difficult Timeseries
-```{r setupBeer, echo = FALSE, comment = FALSE}
+```{r setupBeer, echo = FALSE}
 # beer production
 dminit("4b3320aa36214e35a7d0c6c175a1ff98") # rdatamarket api key
 beer <- dmlist("22ry") # download
@@ -139,31 +142,31 @@ p <- ggplot() + xlim(range(annual$Year)) +
   theme(legend.position="none")
 ```
 
-```{r BeerInvisible, echo = FALSE, fig.width = 4, fig.height = 3, fig.cap = ""}
+```{r BeerInvisible, echo = FALSE, fig.width = 4, fig.height = 3}
 p
 ```
 
 ### Difficult Timeseries
-```{r BeerVisible, echo = FALSE, fig.width = 4, fig.height = 3, fig.cap = ""}
+```{r BeerVisible, echo = FALSE, fig.width = 4, fig.height = 3}
 p <- p + labs(title="Australian Annual Beer Production")
 p
 ```
 
 ### Difficult Timeseries
-```{r BeerForecast1, echo = FALSE, fig.width = 4, fig.height = 3, fig.cap = ""}
+```{r BeerForecast1, echo = FALSE, fig.width = 4, fig.height = 3}
 p <- p + geom_line(aes(Year, Production),  poorForecast, colour = "red")
 p
 ```
 
 ### Difficult Timeseries
-```{r BeerForecast2, echo = FALSE, fig.width = 4, fig.height = 3, fig.cap = ""}
+```{r BeerForecast2, echo = FALSE, fig.width = 4, fig.height = 3}
 p <- p + geom_line(aes(Year, Production), goodForecast, colour = "blue") +
   geom_ribbon(data=goodConfidence,aes(x = seq(1990, 1993), ymax = X1, ymin=X1.1), alpha=0.2)
 p
 ```
 
 ### Difficult Timeseries
-```{r BeerForecast3, echo = FALSE, fig.width = 4, fig.height = 3, fig.cap = ""}
+```{r BeerForecast3, echo = FALSE, fig.width = 4, fig.height = 3}
 p <- p + geom_line(aes(Year, Production), annual[34:38, ], colour = "darkgreen")
 p
 ```
@@ -172,18 +175,21 @@ p
 # Impossible
 
 ### Maps
-```{r map, fig.width = 4, fig.height = 2.8, fig.cap = ""}
+```{r map, fig.width = 4, fig.height = 2.8}
 map("nz", mar = c(0,0,0,0))
 ```
 
 ### Facetted Plots
-```{r mtcars, echo = FALSE, fig.width = 4, fig.height = 2.8, fig.cap = ""}
+```{r mtcars, echo = FALSE, fig.width = 4, fig.height = 2.8}
 ggplot(tips, aes(x=total_bill, fill = time)) +
   geom_density(alpha = 0.2) +
   facet_grid(sex ~ smoker, margins = TRUE) +
   xlab("") + ylab("") + 
   theme(axis.text = element_blank(), axis.ticks = element_blank())
 ```
+
+### Diff
+\includegraphics[width=4in]{figures/diff.png}
 
 ### Links
 
@@ -192,6 +198,7 @@ ggplot(tips, aes(x=total_bill, fill = time)) +
 * R Markdown with R Studio: <http://rstudio.org/docs/authoring/using_markdown>
 * knitr: <http://yihui.name/knitr/>
 * LaTeX: <http://tex.stackexchange.com/>
+* Version Control for Data Analysts: <http://stackoverflow.com/questions/2712421/>
 
 ### Thank You
 
