@@ -1,0 +1,15 @@
+```{r setup, include=FALSE}
+opts_chunk$set(dev = 'pdf')
+require(ggplot2)
+require(reshape2)
+```
+
+### Test Slide
+
+```{r mtcars, echo = FALSE, fig.width = 4, fig.height = 2.8, fig.cap = ""}
+ggplot(tips, aes(x=total_bill, fill = time)) +
+  geom_density(alpha = 0.2) +
+  facet_grid(sex ~ smoker, margins = TRUE) +
+  xlab("") + ylab("") + 
+  theme(axis.text = element_blank(), axis.ticks = element_blank())
+```

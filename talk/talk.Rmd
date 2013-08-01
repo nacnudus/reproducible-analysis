@@ -25,26 +25,33 @@ require(forecast)
 ### Put it in an Email
 * Written instructions
 * Toolchains
-* Open Source
 * Workflow
+* Open Source
 
-### Toolchain: Data Analysis
+### Toolchain
 1.  Database
 1.  Programming language
 1.  Extentions to the programming language
     * convenience functions
-    * forecasting
+    * advanced functions (e.g. forecasting)
     * charts
     * maps
+1.  Collaboration
+    * version control
+    * open source
+1.  Presentation
+    * reports
+    * slideshows
     * interactive charts
-    * presentation
     * notebooks
+
 
 ### Toolchain: Presentation
 
 ### Open Source
 * Documentation
 * Support
+  
 * Extensibility
 
 ### Workflow
@@ -161,6 +168,22 @@ p <- p + geom_line(aes(Year, Production), annual[34:38, ], colour = "darkgreen")
 p
 ```
 
+
+# Impossible
+
+### Maps
+```{r map, fig.width = 4, fig.height = 2.8, fig.cap = ""}
+map("nz", mar = c(0,0,0,0))
+```
+
+### Facetted Plots
+```{r mtcars, echo = FALSE, fig.width = 4, fig.height = 2.8, fig.cap = ""}
+ggplot(tips, aes(x=total_bill, fill = time)) +
+  geom_density(alpha = 0.2) +
+  facet_grid(sex ~ smoker, margins = TRUE) +
+  xlab("") + ylab("") + 
+  theme(axis.text = element_blank(), axis.ticks = element_blank())
+```
 
 ### Links
 

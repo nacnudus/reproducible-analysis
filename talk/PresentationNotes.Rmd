@@ -26,6 +26,9 @@ Excel: `cell-value = SUM(1, 2, 3)`
   
 R: `myVariable = sum(1, 2, 3)`
 
+Maps
+----
+
 Outline
 -------
 The Problem - show a blank slide and let the mouse do the work.
