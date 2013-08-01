@@ -58,7 +58,9 @@ LCFD -- Least Commonly Fouled-up Data
 
 ### Database (SQLite)
 
-## Demo -- Programming
+# Demo
+
+## Basics
 
 ### Basic Programming
 ```{r}
@@ -74,32 +76,39 @@ head(baseball[, c("id", "year"
 ```
 
 ### Manipulate Data
-```{r}
+```{r manipulate}
 rbi <- ddply(baseball, .(year), summarise,  
   mean_rbi = mean(rbi, na.rm = TRUE))
 head(rbi)
 ```
 
 ### Basic Plots
-```{r meanRbiByYear, fig.width = 4, fig.height = 2.25, fig.cap = "mean rbi by year"}
+```{r basicPlot, fig.width = 4, fig.height = 2.5, fig.cap = "mean rbi by year"}
 qplot(year, mean_rbi, data = rbi, geom = "line")
 ```
 
-### Difficult Timeseries
-```{r setupBeer, include = FALSE}
-dminit("4b3320aa36214e35a7d0c6c175a1ff98")
-a <- dmlist("22ry")
-a$year <- as.numeric(substr(as.character(a$Quarter), 1, 4))
-b <- ddply(a, .(year), function(x) sum(x$Value))[1:38, ]
-p <- ggplot() + xlim(range(b$year)) + ylim(range(b$V1)) + geom_line(data = b[1:34, ], aes(year, V1))
+### Plots you can't do in Excel
+```{r nonExcelPlot, message = FALSE, warning = FALSE, fig.width = 4, fig.height = 2.5, fig.cap = "mean rbi by year"}
+qplot(year, mean_rbi, data = rbi, geom = "line") +
+    geom_smooth()
 ```
 
-```{r BeerInvisible, echo = FALSE, fig.width = 4, fig.height = 2.5, fig.cap = ""}
-p
+## Time-series Forecasting
+
+### Easy Timeseries
+
+```{r gas, echo = FALSE, fig.width = 4, fig.height = 3.5, fig.cap = "", cache = TRUE}
+plot(forecast(gas), main = "Australian monthly gas production")
+```
+
+### Easy Timeseries
+
+```{r gasDecompose, echo = FALSE, fig.width = 4, fig.height = 3.5, fig.cap = "", cache = TRUE}
+plot(stl(gas, "periodic"))
 ```
 
 ### Difficult Timeseries
-```{r setupBeer, include = FALSE}
+```{r setupBeer, echo = FALSE, comment = FALSE}
 # beer production
 dminit("4b3320aa36214e35a7d0c6c175a1ff98") # rdatamarket api key
 beer <- dmlist("22ry") # download
@@ -107,6 +116,7 @@ beer$Year <- as.numeric(substr(as.character(beer$Quarter), 1, 4)) # extract year
 annual <- ddply(beer[1:152, ], .(Year), summarize, Production = sum(Value)) # summarize by year
 # forecast with forecast package
 goodForecast <- forecast(as.ts(annual[1:34, "Production"]), h = 4)
+goodConfidence <- data.frame(goodForecast$upper, goodForecast$lower)
 goodForecast <- data.frame(Year = seq(1990, 1993), Production = goodForecast$mean) # df for ggplot
 # forecast with simple regression
 production <- annual[1:34, "Production"]
@@ -117,7 +127,7 @@ poorForecast <- data.frame(Year = c(poorForecast$model$year, seq(1990, 1993))
                            , Production <- c(poorForecast$fitted.values, pred))
 # preapre plot (plain data to begin with)
 p <- ggplot() + xlim(range(annual$Year)) + 
-  ylim(range(c(annual$Production, goodForecast$Production, poorForecast$Production))) + 
+  ylim(range(c(annual$Production, goodForecast$Production, poorForecast$Production, goodConfidence$X2))) + 
   geom_line(data = annual[1:34, ], aes(Year, Production)) + 
   theme(legend.position="none")
 ```
@@ -127,30 +137,38 @@ p
 ```
 
 ### Difficult Timeseries
-```{r BeerInvisible, echo = FALSE, fig.width = 4, fig.height = 3, fig.cap = "Australian annual beer production"}
+```{r BeerVisible, echo = FALSE, fig.width = 4, fig.height = 3, fig.cap = ""}
+p <- p + labs(title="Australian Annual Beer Production")
 p
 ```
 
-```{r BeerForecast, echo = FALSE, fig.width = 4, fig.height = 3, fig.cap = ""}
+### Difficult Timeseries
+```{r BeerForecast1, echo = FALSE, fig.width = 4, fig.height = 3, fig.cap = ""}
 p <- p + geom_line(aes(Year, Production),  poorForecast, colour = "red")
 p
-p <- p + geom_line(aes(Year, Production), goodForecast, colour = "blue")
-p
-p <- p + geom_line(aes(Year, Production), annual[34:38, ], colour = "orange")
+```
+
+### Difficult Timeseries
+```{r BeerForecast2, echo = FALSE, fig.width = 4, fig.height = 3, fig.cap = ""}
+p <- p + geom_line(aes(Year, Production), goodForecast, colour = "blue") +
+  geom_ribbon(data=goodConfidence,aes(x = seq(1990, 1993), ymax = X1, ymin=X1.1), alpha=0.2)
 p
 ```
+
+### Difficult Timeseries
+```{r BeerForecast3, echo = FALSE, fig.width = 4, fig.height = 3, fig.cap = ""}
+p <- p + geom_line(aes(Year, Production), annual[34:38, ], colour = "darkgreen")
+p
+```
+
 
 ### Links
 
-* knitr: <http://yihui.name/knitr/>
+* R on StackOverflow: <http://stackoverflow.com/questions/tagged/r>
 * R Studio: <http://rstudio.org/>
 * R Markdown with R Studio: <http://rstudio.org/docs/authoring/using_markdown>
-* My Posts  <http://jeromyanglim.blogspot.com.au/search/label/reproducible%20research>
-
-#### Places to ask questions
-* R on StackOverflow: <http://stackoverflow.com/questions/tagged/r>
+* knitr: <http://yihui.name/knitr/>
 * LaTeX: <http://tex.stackexchange.com/>
-* knitr: <https://github.com/yihui/knitr/issues>
 
 ### Thank You
 
