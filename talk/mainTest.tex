@@ -56,6 +56,8 @@
 \newcommand{\NormalTok}[1]{{#1}}
 \usepackage{enumerate}
 \usepackage{url}
+% two-column outline
+\usepackage{multicol}
 
 % enables straight single quote
 \makeatletter
@@ -80,10 +82,11 @@
 % contents page
 \begin{frame}
 \frametitle{Outline}
-\tableofcontents
+\tableofcontents[hideallsubsections]
 \end{frame}
 
 % slides from talk.md
-\input{"test.tex"}
+\input{"talk.tex"}
 
 \end{document}
+
