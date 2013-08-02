@@ -1,0 +1,29 @@
+A.I. McLeod  Professor Department of Statistical and Actuarial Sciences University of Western Ontario
+Achim Zeileis	Professor, Department of Statistics, Faculty of Economics and Statistics, Universität Innsbruck
+Arne Henningsen	Associate Professor in Applied Production Analysis Section of Production, Markets, and Policy, Department of Food and Resource Economics, University of Copenhagen
+Brian Ripley	Professor of Applied Statistics at the University of Oxford
+Charles J. Geyer	Professor. School of Statistics. University of Minnesota
+Dirk Eddelbuettel	Financial econometrician with a Chicago-based trading firm
+Gregory R. Warnes	Associate Professor of Biostatistics and Computational Biology, University of Rochester
+Hadley Wickham	Assistant Professor of Statistics at Rice University
+Hana Sevcikova	Senior Research Scientist, University of Washington
+Henrik Bengtsson	Assistant Professor, University of California
+Jonathan M. Lees	Professor, University of North Carolina
+Karline Soetaert	Head of Department, Royal Netherlands Institute for Sea Research
+Kurt Hornik	Professor, Vienna University of Economics and Business
+Martin Maechler	Swiss Federal Institute of Technology, Zurich
+Matthias Kohl	Professor for Mathematics in Biology and Medicine, Furtwangen University
+Michael Friendly	Professor of Psychology at York University in Ontario, Canada
+Michael Hahsler	Professor, Engineering Management, Computer Science, SMU
+Mikis Stasinopoulos	Professor, London Metropolitan University
+Olaf Mersmann	University of Dortmund
+Paul Gilbert	Bank of Canada
+Peter Ruckdeschel	Research associate at Financial Mathematics Dept., Fraunhofer Institute for Industrial Mathematics
+Philippe Grosjean	Professor in biostatistics, University of Mons
+Robin K. S. Hankin	Professor, AUT
+Roger D. Peng		Associate Professor Department of Biostatistics, Johns Hopkins Bloomberg School of Public Health
+Simon Urbanek		Researcher at AT&T Research Labs
+Thomas Lumley		Professor, University of Auckland
+Torsten Hothorn	Professor of Biostatistics, University of Zurich
+Yihui Xie	Department of Statistics, Iowa State University
+Yohan Chalabi	University of Zurich

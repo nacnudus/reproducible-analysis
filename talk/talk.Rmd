@@ -193,10 +193,6 @@ ggplot(tips, aes(x=total_bill, fill = time)) +
 
 ### Packages
 \includegraphics[height=3in]{figures/packages.png}
-When the blog was published on 2 May, the pink bar was lower than the orange bar.  But the orange bar was higher, too, so this is packages that were last updated each year.
-
-### Maintainers
-\includegraphics[height=3in]{figures/maintainers.png}
 
 ### Maintainers
 ```{r echo = FALSE, results='asis'}

@@ -1,0 +1,29 @@
+A.I. McLeod,Professor,Western Ontario
+Achim Zeileis,Professor,Innsbruck
+Arne Henningsen,,Copenhagen
+Brian Ripley,Professor,Oxford
+Charles J. Geyer,Professor,Minnesota
+Dirk Eddelbuettel
+Gregory R. Warnes,Associate Professor,Rochester
+Hadley Wickham,Assistant Professor,Rice University
+Hana Sevcikova,Senior Research Scientist,Washington
+Henrik Bengtsson,Assistant Professor,California
+Jonathan M. Lees,Professor,North Carolina
+Karline Soetaert
+Kurt Hornik,Professor,Vienna U. of Econ. & Bus.
+Martin Maechler
+Matthias Kohl,Professor,Furtwangen
+Michael Friendly,Professor,York Ontario
+Michael Hahsler,Professor,SMU
+Mikis Stasinopoulos,Professor,London Metropolitan
+Olaf Mersmann,,Dortmund
+Paul Gilbert
+Peter Ruckdeschel
+Philippe Grosjean,Professor,Mons
+Robin K. S. Hankin,Professor,AUT
+Roger D. Peng,Associate Professor,Johns Hopkins
+Simon Urbanek
+Thomas Lumley,Professor,Auckland
+Torsten Hothorn,Professor,Zurich
+Yihui Xie,,Iowa State
+Yohan Chalabi,,Zurich

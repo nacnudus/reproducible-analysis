@@ -58,3 +58,4 @@ R is a statistical programming language.  It's like Excel would be if all you co
 ### packages.png
 Script from http://blog.revolutionanalytics.com/2013/05/how-r-grows.html for packages and maintainers
 Saved as CranPackages.R
+When the blog was published on 2 May, the pink bar was lower than the orange bar.  But the orange bar was higher, too, so this is packages that were last updated each year.
