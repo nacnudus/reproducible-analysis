@@ -2,12 +2,18 @@
 opts_chunk$set(tidy = FALSE) # preserve wrapped code
 opts_chunk$set(dev = 'pdf') # size plots better
 opts_chunk$set(fig.cap = "")
-require(xtable)
+require(XML)
+require(ggplot2)
 ```
 
-### Maintainers
-```{r echo = FALSE, results='asis'}
-x <- read.csv("maintainersShort.txt", header = FALSE)
-colnames(x) <- c("Maintainer", "Position", "University")
-print(xtable(x), size = "\\tiny", comment = FALSE)
-```
+# Part 1
+
+## Section 1
+
+### Slide 1
+
+# Workflow
+
+## LCFD
+
+### LCFD

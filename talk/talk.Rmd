@@ -6,6 +6,8 @@ require(plyr)
 require(ggplot2)
 require(rdatamarket)
 require(forecast)
+require(XML)
+require(xtable)
 ```
 
 # Introduction
@@ -192,7 +194,20 @@ ggplot(tips, aes(x=total_bill, fill = time)) +
 \includegraphics[width=4in]{figures/diff.png}
 
 ### Packages
-\includegraphics[height=3in]{figures/packages.png}
+```{r packages, echo = FALSE, fig.width = 4, fig.height = 3, cache = TRUE}
+# adapted from http://blog.revolutionanalytics.com/2013/05/how-r-grows.html for packages and maintainers
+url <- "http://cran.r-project.org/web/packages/available_packages_by_date.html"
+page <- readHTMLTable(url, stringsAsFactors = FALSE)[[1]]
+names(page) <- c("Date","Package","Title")
+page$Year <- as.factor(substr(page$Date,1,4))
+# plot
+cbbPalette <- c(rep("#E69F00",3), "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+barP <- ggplot(page, aes(factor(Year)))
+barP + geom_bar(fill=cbbPalette) +
+  labs(title = "Available Packages") +
+  ylab("Number") +
+  xlab("Year of Last Update")
+```
 
 ### Maintainers
 ```{r echo = FALSE, results='asis'}
