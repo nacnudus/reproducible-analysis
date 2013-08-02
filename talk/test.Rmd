@@ -6,14 +6,10 @@ require(XML)
 require(ggplot2)
 ```
 
-# Part 1
-
-## Section 1
-
 ### Slide 1
 
-# Workflow
+I wandered through http://www.r-project.org.
 
-## LCFD
+To state the good I found there, I'll also say what else I saw.
 
-### LCFD
+Having abandoned the true way, I fell into a deep sleep and awoke in a deep dark wood. I set out to escape the wood, but my path was blocked by a lion. As I fled to lower ground, a figure appeared before me. Have mercy on me, whatever you are," I cried, "whether shade or living human."

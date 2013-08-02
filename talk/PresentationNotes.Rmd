@@ -64,6 +64,17 @@ TODO: compare with archive here http://cran.r-project.org/src/contrib/Archive/?C
 which includes dead packages.  DONE.  Data problems - some available packages not archived and vice versa.
 
 
+### Links
+
+* R on StackOverflow: <http://stackoverflow.com/questions/tagged/r>
+* R Studio: <http://rstudio.org/>
+* R Markdown with R Studio: <http://rstudio.org/docs/authoring/using_markdown>
+* knitr: <http://yihui.name/knitr/>
+* LaTeX: <http://tex.stackexchange.com/>
+* Version Control for Data Analysts: <http://stackoverflow.com/questions/2712421/>
+
+
+
 # Introduction
 
 ## Problem
@@ -73,9 +84,10 @@ which includes dead packages.  DONE.  Data problems - some available packages no
 
 ## Solution
 
-### Text
-### Workflow
-### Toolchain
+### Solution
+* Text
+* Workflow
+* Toolchain
 
 # Text
 
@@ -146,7 +158,7 @@ which includes dead packages.  DONE.  Data problems - some available packages no
 ## Open Source
 
 ### Documentation
-### Collaboration
+### Collaboration (support)
 ### Pace of Development
 ### Developers
 

@@ -12,114 +12,100 @@ require(xtable)
 
 # Introduction
 
-## The Problem
+## Problem
 
-### Tail Wagging the Dog
+### Tail Wags Dog
 
-### The Scale of the Problem
-* Formal Documents: Journal articles, books, book chapters, theses, consulting reports, etc.
-* Informal documents: preliminary analyses, statistical homework
-* Online content: web pages, blog posts, forum posts
-* Browser metaphor versus page/slide-based metaphor
-
-
-## The Solution
-
-### Put it in an Email
-* Written instructions
-* Toolchains
-* Workflow
-* Open Source
-
-### Toolchain
-1.  Database
-1.  Programming language
-1.  Extentions to the programming language
-    * convenience functions
-    * advanced functions (e.g. forecasting)
-    * charts
-    * maps
-1.  Collaboration
-    * version control
-    * open source
-1.  Presentation
+### Scale of Problem
+* Formal Documents
+    * papers
     * reports
-    * slideshows
+    * OIAs
+* Informal documents
+    * information requests
+    * preliminary analyses
+* Online Content
+    * web/intranet
+    * Stats NZ
+* User Interaction
     * interactive charts
-    * notebooks
+    * online forms
 
+## Solution
 
-### Toolchain: Presentation
+### Put It in an Email
+* Text
+* Workflow
+* Toolchain
 
-### Open Source
-* Documentation
-* Support
-* Extensibility
+# Text
 
-### Support
-"The third problem in your code is, you are print()ing plots from R base graphics. Sigh. Printing base graphics does not make any sense."
+## Human-Readable
 
-### Workflow
-LCFD -- Least Commonly Fouled-up Data
-* L = Load
-* C = Clean
-* F = Functions
-* D = Do
+### Database
+### Data Transfer (email)
+### Data Transfer (web)
+### Data Transfer (application)
+### Integrity
 
-## Demo -- Database
+## Version Control
 
-### Database (SQLite)
+### Diff
+\includegraphics[width=4in]{figures/diff.png}
 
-# Demo
+### Folder Structure
+### Diff Tree
 
-## Basics
+# Workflow
 
-### Basic Programming
-```{r}
-1 + 1
-mean(c(1, 3, 5, 8, 10))
+## LCFD
+
+### LCFD
+
+## Load
+
+### Local File
+### Database
+### Web
+
+## Clean
+
+### Pivot
+### Impossible Pivot
+### Re-Coding
+
+## Functions
+
+### Pivot (again)
+### Plot
+
+## Do
+
+### Facet
+```{r tips, echo = FALSE, fig.width = 4, fig.height = 2.8}
+ggplot(tips, aes(x=total_bill, fill = time)) +
+  geom_density(alpha = 0.2) +
+  facet_grid(sex ~ smoker, margins = TRUE) +
+  xlab("") + ylab("") + 
+  theme(axis.text = element_blank(), axis.ticks = element_blank())
 ```
 
-### Load/Visualize Data
-
-```{r}
-head(baseball[, c("id", "year"  
-                  , "stint", "team", "rbi")])
+### Map
+```{r map, fig.width = 4, fig.height = 2.8}
+map("nz", mar = c(0,0,0,0))
 ```
 
-### Manipulate Data
-```{r manipulate}
-rbi <- ddply(baseball, .(year), summarise,  
-  mean_rbi = mean(rbi, na.rm = TRUE))
-head(rbi)
-```
-
-### Basic Plots
-```{r basicPlot, fig.width = 4, fig.height = 2.5, fig.cap = "mean rbi by year"}
-qplot(year, mean_rbi, data = rbi, geom = "line")
-```
-
-### Plots you can't do in Excel
-```{r nonExcelPlot, message = FALSE, warning = FALSE, fig.width = 4, fig.height = 2.5, fig.cap = "mean rbi by year"}
-qplot(year, mean_rbi, data = rbi, geom = "line") +
-    geom_smooth()
-```
-
-## Time-series Forecasting
-
-### Easy Timeseries
-
+### Forecast
 ```{r gas, echo = FALSE, fig.width = 4, fig.height = 3.5, cache = TRUE}
 plot(forecast(gas), main = "Australian monthly gas production")
 ```
 
-### Easy Timeseries
-
+### Decompose
 ```{r gasDecompose, echo = FALSE, fig.width = 4, fig.height = 3.5, cache = TRUE}
 plot(stl(gas, "periodic"))
 ```
 
-### Difficult Timeseries
+### Forecast (harder)
 ```{r setupBeer, echo = FALSE}
 # beer production
 dminit("4b3320aa36214e35a7d0c6c175a1ff98") # rdatamarket api key
@@ -148,52 +134,68 @@ p <- ggplot() + xlim(range(annual$Year)) +
 p
 ```
 
-### Difficult Timeseries
+### Forecast (harder)
 ```{r BeerVisible, echo = FALSE, fig.width = 4, fig.height = 3}
 p <- p + labs(title="Australian Annual Beer Production")
 p
 ```
 
-### Difficult Timeseries
+### Forecast (harder)
 ```{r BeerForecast1, echo = FALSE, fig.width = 4, fig.height = 3}
 p <- p + geom_line(aes(Year, Production),  poorForecast, colour = "red")
 p
 ```
 
-### Difficult Timeseries
+### Forecast (harder)
 ```{r BeerForecast2, echo = FALSE, fig.width = 4, fig.height = 3}
 p <- p + geom_line(aes(Year, Production), goodForecast, colour = "blue") +
   geom_ribbon(data=goodConfidence,aes(x = seq(1990, 1993), ymax = X1, ymin=X1.1), alpha=0.2)
 p
 ```
 
-### Difficult Timeseries
+### Forecast (harder)
 ```{r BeerForecast3, echo = FALSE, fig.width = 4, fig.height = 3}
 p <- p + geom_line(aes(Year, Production), annual[34:38, ], colour = "darkgreen")
 p
 ```
 
+### Cluster
 
-# Impossible
+# Toolchain
 
-### Maps
-```{r map, fig.width = 4, fig.height = 2.8}
-map("nz", mar = c(0,0,0,0))
-```
+## Database
 
-### Facetted Plots
-```{r mtcars, echo = FALSE, fig.width = 4, fig.height = 2.8}
-ggplot(tips, aes(x=total_bill, fill = time)) +
-  geom_density(alpha = 0.2) +
-  facet_grid(sex ~ smoker, margins = TRUE) +
-  xlab("") + ylab("") + 
-  theme(axis.text = element_blank(), axis.ticks = element_blank())
-```
+### Scale
+### Workspace
 
-### Diff
-\includegraphics[width=4in]{figures/diff.png}
+## Programming Language
 
-### Packages
+### Languages
+* R
+* SAS
+* SPSS
+* S Plus
+
+`cell_value = SUM(1, 2, 3)`
+  
+`variable <- sum(1, 2, 3)`
+
+### Extensibility
+
+## Presentation
+
+### Paper
+### Shiny
+### Slidify
+
+## Open Source
+
+### Documentation
+
+### Collaboration (support)
+"The third problem in your code is, you are print()ing plots from R base graphics. Sigh. Printing base graphics does not make any sense."
+
+### Pace of Development
 ```{r packages, echo = FALSE, fig.width = 4, fig.height = 3, cache = TRUE}
 # adapted from http://blog.revolutionanalytics.com/2013/05/how-r-grows.html for packages and maintainers
 url <- "http://cran.r-project.org/web/packages/available_packages_by_date.html"
@@ -209,26 +211,14 @@ barP + geom_bar(fill=cbbPalette) +
   xlab("Year of Last Update")
 ```
 
-### Maintainers
+### Developers
 ```{r echo = FALSE, results='asis'}
 x <- read.csv("maintainersShort.txt", header = FALSE)
 colnames(x) <- c("Maintainer", "Position", "University")
 print(xtable(x), size = "\\tiny", comment = FALSE)
 ```
 
-### Links
-
-* R on StackOverflow: <http://stackoverflow.com/questions/tagged/r>
-* R Studio: <http://rstudio.org/>
-* R Markdown with R Studio: <http://rstudio.org/docs/authoring/using_markdown>
-* knitr: <http://yihui.name/knitr/>
-* LaTeX: <http://tex.stackexchange.com/>
-* Version Control for Data Analysts: <http://stackoverflow.com/questions/2712421/>
-
 ### Thank You
-
 \begin{center}
 \LARGE{Questions?}
 \end{center}
-
-
