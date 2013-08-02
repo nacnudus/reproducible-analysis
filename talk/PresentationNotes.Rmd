@@ -54,3 +54,7 @@ Do simplest possible interactive graph that isn't remotely possible in Excel.
 ### R
 R is a statistical programming language.  It's like Excel would be if all you could see were the formulae in each cell.
 
+
+### packages.png
+Script from http://blog.revolutionanalytics.com/2013/05/how-r-grows.html for packages and maintainers
+Saved as CranPackages.R

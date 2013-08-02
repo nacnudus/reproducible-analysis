@@ -191,6 +191,20 @@ ggplot(tips, aes(x=total_bill, fill = time)) +
 ### Diff
 \includegraphics[width=4in]{figures/diff.png}
 
+### Packages
+\includegraphics[height=3in]{figures/packages.png}
+When the blog was published on 2 May, the pink bar was lower than the orange bar.  But the orange bar was higher, too, so this is packages that were last updated each year.
+
+### Maintainers
+\includegraphics[height=3in]{figures/maintainers.png}
+
+### Maintainers
+```{r echo = FALSE, results='asis'}
+x <- read.csv("maintainersShort.txt", header = FALSE)
+colnames(x) <- c("Maintainer", "Position", "University")
+print(xtable(x), size = "\\tiny", comment = FALSE)
+```
+
 ### Links
 
 * R on StackOverflow: <http://stackoverflow.com/questions/tagged/r>

@@ -1,8 +1,13 @@
 ```{r setup, include=FALSE}
-opts_chunk$set(dev = 'pdf')
-require(ggplot2)
-require(reshape2)
+opts_chunk$set(tidy = FALSE) # preserve wrapped code
+opts_chunk$set(dev = 'pdf') # size plots better
+opts_chunk$set(fig.cap = "")
+require(xtable)
 ```
 
-### Test Slide
-\includegraphics[width=4in]{figures/diff.png}
+### Maintainers
+```{r echo = FALSE, results='asis'}
+x <- read.csv("maintainersShort.txt", header = FALSE)
+colnames(x) <- c("Maintainer", "Position", "University")
+print(xtable(x), size = "\\tiny", comment = FALSE)
+```
