@@ -59,3 +59,95 @@ R is a statistical programming language.  It's like Excel would be if all you co
 Script from http://blog.revolutionanalytics.com/2013/05/how-r-grows.html for packages and maintainers
 Saved as CranPackages.R
 When the blog was published on 2 May, the pink bar was lower than the orange bar.  But the orange bar was higher, too, so this is packages that were last updated each year.
+
+TODO: compare with archive here http://cran.r-project.org/src/contrib/Archive/?C=M;O=A
+which includes dead packages.  DONE.  Data problems - some available packages not archived and vice versa.
+
+
+# Introduction
+
+## Problem
+
+### Tail Wags Dog
+### Scale of Problem
+
+## Solution
+
+### Text
+### Workflow
+### Toolchain
+
+# Text
+
+## Human-Readable
+
+### Database
+### Data Transfer (email)
+### Data Transfer (web)
+### Data Transfer (application)
+### Integrity
+
+## Version Control
+
+### Diff
+### Folder Structure
+### Diff Tree
+
+# Workflow
+
+## LCFD
+
+### LCFD
+
+## Load
+
+### Local File
+### Database
+### Web
+
+## Clean
+
+### Pivot
+### Impossible Pivot
+### Re-Coding
+
+## Functions
+
+### Pivot (again)
+### Plot
+
+## Do
+
+### Facet
+### Map
+### Forecast
+### Decompose
+### Forecast (beer)
+### Cluster
+
+# Toolchain
+
+## Database
+
+### Scale
+### Workspace
+
+## Programming Language
+
+### Languages
+### Extensibility
+
+## Presentation
+
+### Paper
+### Shiny
+### Slidify
+
+## Open Source
+
+### Documentation
+### Collaboration
+### Pace of Development
+### Developers
+
+# Thank You
