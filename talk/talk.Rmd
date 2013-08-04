@@ -11,6 +11,7 @@ require(forecast)
 require(XML)
 require(xtable)
 require(maps)
+require(stinepack) # for ggplot equivalent of decompose
 ```
 
 # Introduction
@@ -53,13 +54,21 @@ require(maps)
     PostalCode varchar(10),  
 
 ### Data Transfer (email)
-    <span style='font-size:9.0pt;font-family:"Arial">
-    Kay Gregory is a Journalist and Professional
-    Speaker who is kept busy as an M.C, Marriage
-    and Funeral Celebrant, Pubic Relations consultant,
-    Television News Producer, and Newsreader for
-    Radio Live.
-    <o:p></o:p></span>
+\scriptsize{MIME-Version: 1.0\\
+Received: by 10.141.132.10 with HTTP; Fri, 27 Feb 2013 22:18:46 -0800 (PST)\\
+Date: Sat, 28 Feb 2009 19:18:46 +1300\\
+Delivered-To: nacnudus@gmail.com\\
+Message-ID: <646bfbfc0902272218k33f818a0n257983794298ae74@mail.gmail.com>\\
+Subject: A good joke\\
+From: Duncan Garmonsway <obfuscated1@gmail.com>\\
+To: Harold Garmonsway <obfuscated2@gmail.com>\\
+Content-Type: multipart/alternative; boundary=000e0cd29660dd3ae20463f48edd\\
+--000e0cd29660dd3ae20463f48edd\\
+Content-Type: text/plain; charset=ISO-8859-1\\
+Content-Transfer-Encoding: 7bit\\
+\vspace*{2\baselineskip}}
+\small{Shakespeare on Excel:
+=OR(B2,NOT(B2))}
 
 ### Data Transfer (application)
     <META HTTP-EQUIV="Content-Type"
@@ -70,6 +79,7 @@ require(maps)
     <TITLE>Weekly Report</TITLE>
 
 ### Data Transfer (web)
+
 
 ### Integrity
 
@@ -138,8 +148,19 @@ plot(forecast(gas), main = "Australian monthly gas production")
 ```
 
 ### Decompose
-```{r gasDecompose, echo = FALSE, fig.width = 4, fig.height = 3.5, cache = TRUE}
-plot(stl(gas, "periodic"))
+```{r gasDecompose, echo = FALSE, fig.width = 4, fig.height = 3, cache = TRUE}
+# function for ggplot equivalent of decompose on a timeseries
+decomp <- function(series,frequency){ 
+    x <- na.stinterp(series)  #this is for interpolation 
+    x1 <- ts(x,start=01,freq=frequency) #converting into a ts object
+    x2 <- stl(x1,s.window="periodic") #performing stl on the ts object
+    x3 <- data.frame(x,x2$time.series) #creating a data.frame
+    x3$index <- index(x3) #create an id 
+    colnames(x3)[1] <- "time-series"  
+    x4 <- melt(x3,id.vars="index")   #melt the dataframe into long format  
+    ggplot(x4,aes(index,value,group=variable)) + geom_line(alpha=0.7) + facet_grid(variable ~., scales="free")  + xlab("Timesteps") + ylab("values") + theme(axis.text = element_blank(), axis.ticks = element_blank())
+}
+decomp(as.numeric(gas), 12)
 ```
 
 ### Forecast (harder)

@@ -4,13 +4,21 @@ opts_chunk$set(dev = 'pdf') # size plots better
 opts_chunk$set(fig.cap = "")
 require(reshape2)
 require(ggplot2)
-require(grid) # for "unit" function for ggplot legend size
+require(stinepack)
 ```
 
 ### Slide 1
-    <META HTTP-EQUIV="Content-Type"
-        CONTENT="text/html; charset=iso-8859-1">
-    <META NAME="Generator" 
-        CONTENT="MS Exchange Server 
-        version 08.02.0254.000">
-    <TITLE>Weekly Report</TITLE>
+```{r gasDecompose, echo = FALSE, fig.width = 4, fig.height = 3, cache = TRUE}
+# function for ggplot equivalent of decompose on a timeseries
+decomp <- function(series,frequency){ 
+    x <- na.stinterp(series)  #this is for interpolation 
+    x1 <- ts(x,start=01,freq=frequency) #converting into a ts object
+    x2 <- stl(x1,s.window="periodic") #performing stl on the ts object
+    x3 <- data.frame(x,x2$time.series) #creating a data.frame
+    x3$index <- index(x3) #create an id 
+    colnames(x3)[1] <- "time-series"  
+    x4 <- melt(x3,id.vars="index")   #melt the dataframe into long format  
+    ggplot(x4,aes(index,value,group=variable)) + geom_line(alpha=0.7) + facet_grid(variable ~., scales="free")  + xlab("Timesteps") + ylab("values") + theme(axis.text = element_blank(), axis.ticks = element_blank())
+}
+decomp(as.numeric(gas), 12)
+```
