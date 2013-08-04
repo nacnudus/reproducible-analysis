@@ -3,16 +3,17 @@ opts_chunk$set(tidy = FALSE) # preserve wrapped code
 opts_chunk$set(dev = 'pdf') # size plots better
 opts_chunk$set(fig.cap = "")
 require(plyr)
+require(reshape2) # for 'tips' dataset
 require(ggplot2)
+require(grid) # for "unit" function for ggplot legend size
 require(rdatamarket)
 require(forecast)
 require(XML)
 require(xtable)
+require(maps)
 ```
 
 # Introduction
-
-## Problem
 
 ### Tail Wags Dog
 
@@ -31,8 +32,6 @@ require(xtable)
     * interactive charts
     * online forms
 
-## Solution
-
 ### Put It in an Email
 * Text
 * Workflow
@@ -41,9 +40,21 @@ require(xtable)
 # Text
 
 ## Human-Readable
+### Human-Readable
 
 ### Database
+    CustomerID varchar(5) NOT NULL,  
+    CompanyName varchar(40) NOT NULL,  
+    ContactName varchar(30),  
+    ContactTitle varchar(30),  
+    Address varchar(60)  
+    City varchar(15),  
+    Region varchar(15),  
+    PostalCode varchar(10),  
+
 ### Data Transfer (email)
+    </v:shape><![endif]--><![if !vml]><img width=300 height=291 src="cid:image001.jpg@01CE7D5E.F661B780" align=right hspace=10 vspace=10 alt=Alt v:shapes="Picture_x0020_2"><![endif]><span style='font-size:9.0pt;font-family:"Arial","sans-serif";color:#4C4C4C'>Kay Gregory is a Journalist and Professional Speaker who is kept busy as an M.C, Marriage and Funeral Celebrant, Pubic Relations consultant, Television News Producer, and Newsreader for Radio Live.<o:p></o:p></span></p><p class=MsoNormal style='margin-top:7.5pt'><span style='font-size:9.0pt;font-family:"Arial","sans-serif";color:#4C4C4C'>Kay was formerly a Reporter for One News, a Weather Presenter and co-host of &#8220;Breakfast&#8221;.<o:p></o:p></span></p><p class=MsoNormal style='margin-top:7.5pt'><span style='font-size:9.0pt;font-family:"Arial","sans-serif";color:#4C4C4C'>She is a board member for the Neurological Foundation and the Sky City Community Trust, and is actively involved as a volunteer for Rowing New Zealand.<o:p></o:p></span></p><p class=Mso
+
 ### Data Transfer (web)
 ### Data Transfer (application)
 ### Integrity
@@ -83,12 +94,23 @@ require(xtable)
 ## Do
 
 ### Facet
-```{r tips, echo = FALSE, fig.width = 4, fig.height = 2.8}
-ggplot(tips, aes(x=total_bill, fill = time)) +
-  geom_density(alpha = 0.2) +
-  facet_grid(sex ~ smoker, margins = TRUE) +
-  xlab("") + ylab("") + 
-  theme(axis.text = element_blank(), axis.ticks = element_blank())
+```{r bayOfPlenty, echo = FALSE, fig.width = 4, fig.height = 3}
+x <- read.csv("BoP.csv", header = TRUE)
+colnames(x) <- c("count", "hour", "weekend", "fatal", "alcohol", "urban")
+x$count <- as.numeric(x$count)
+x$hour <- as.numeric(x$hour)
+# abbreviate alcohol column for graph labels
+alc <- factor(c("alc/drug", "clean"))
+x$alcohol <- alc[x$alcohol]
+y <- dcast(x, hour + weekend + fatal + alcohol + urban ~ ., fun.aggregate = sum, value.var = "count")
+colnames(y)[6] <- "count"
+y <- y[rep(row.names(y), y$count), 1:5]
+ggplot(y, aes(hour, group = weekend, fill = weekend)) + 
+  geom_density(alpha = 0.2) + 
+  facet_grid(alcohol ~ urban, margins = TRUE) +
+  theme(legend.position="bottom", legend.title=element_blank()) +
+  theme(legend.key.size = unit("0.2", "cm")) +
+  theme(axis.text.y = element_blank(), axis.ticks.y = element_blank())
 ```
 
 ### Map

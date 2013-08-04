@@ -2,14 +2,17 @@
 opts_chunk$set(tidy = FALSE) # preserve wrapped code
 opts_chunk$set(dev = 'pdf') # size plots better
 opts_chunk$set(fig.cap = "")
-require(XML)
+require(reshape2)
 require(ggplot2)
+require(grid) # for "unit" function for ggplot legend size
 ```
 
 ### Slide 1
-
-I wandered through http://www.r-project.org.
-
-To state the good I found there, I'll also say what else I saw.
-
-Having abandoned the true way, I fell into a deep sleep and awoke in a deep dark wood. I set out to escape the wood, but my path was blocked by a lion. As I fled to lower ground, a figure appeared before me. Have mercy on me, whatever you are," I cried, "whether shade or living human."
+    CustomerID varchar(5) NOT NULL,  
+    CompanyName varchar(40) NOT NULL,  
+    ContactName varchar(30),  
+    ContactTitle varchar(30),  
+    Address varchar(60)  
+    City varchar(15),  
+    Region varchar(15),  
+    PostalCode varchar(10),  
