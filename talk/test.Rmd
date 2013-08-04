@@ -8,10 +8,9 @@ require(grid) # for "unit" function for ggplot legend size
 ```
 
 ### Slide 1
-    <span style='font-size:9.0pt;font-family:"Arial">
-    Kay Gregory is a Journalist and Professional
-    Speaker who is kept busy as an M.C, Marriage
-    and Funeral Celebrant, Pubic Relations consultant,
-    Television News Producer, and Newsreader for
-    Radio Live.
-    <o:p></o:p></span>
+    <META HTTP-EQUIV="Content-Type"
+        CONTENT="text/html; charset=iso-8859-1">
+    <META NAME="Generator" 
+        CONTENT="MS Exchange Server 
+        version 08.02.0254.000">
+    <TITLE>Weekly Report</TITLE>
