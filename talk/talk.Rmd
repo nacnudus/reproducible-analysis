@@ -53,7 +53,13 @@ require(maps)
     PostalCode varchar(10),  
 
 ### Data Transfer (email)
-    </v:shape><![endif]--><![if !vml]><img width=300 height=291 src="cid:image001.jpg@01CE7D5E.F661B780" align=right hspace=10 vspace=10 alt=Alt v:shapes="Picture_x0020_2"><![endif]><span style='font-size:9.0pt;font-family:"Arial","sans-serif";color:#4C4C4C'>Kay Gregory is a Journalist and Professional Speaker who is kept busy as an M.C, Marriage and Funeral Celebrant, Pubic Relations consultant, Television News Producer, and Newsreader for Radio Live.<o:p></o:p></span></p><p class=MsoNormal style='margin-top:7.5pt'><span style='font-size:9.0pt;font-family:"Arial","sans-serif";color:#4C4C4C'>Kay was formerly a Reporter for One News, a Weather Presenter and co-host of &#8220;Breakfast&#8221;.<o:p></o:p></span></p><p class=MsoNormal style='margin-top:7.5pt'><span style='font-size:9.0pt;font-family:"Arial","sans-serif";color:#4C4C4C'>She is a board member for the Neurological Foundation and the Sky City Community Trust, and is actively involved as a volunteer for Rowing New Zealand.<o:p></o:p></span></p><p class=Mso
+    <span style='font-size:9.0pt;font-family:"Arial">
+    Kay Gregory is a Journalist and Professional
+    Speaker who is kept busy as an M.C, Marriage
+    and Funeral Celebrant, Pubic Relations consultant,
+    Television News Producer, and Newsreader for
+    Radio Live.
+    <o:p></o:p></span>
 
 ### Data Transfer (web)
 ### Data Transfer (application)
