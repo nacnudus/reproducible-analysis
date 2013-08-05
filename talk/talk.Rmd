@@ -18,15 +18,28 @@ require(stinepack) # for ggplot equivalent of decompose
 
 ### Tail Wags Dog
 
+### Aims
+* Reproducibility
+    * efficiency
+    * extensibility
+* Accuracy
+    * verify action against intention
+    * review choices
+* Communication
+    * collaboration
+    * trustworthiness
+
+\small{This slide based on Jeromy Anglim https://github.com/jeromyanglim/rmarkdown-rmeetup-2012}
+
 ### Scale of Problem
-* Formal Documents
+* Publications
     * papers
     * reports
     * OIAs
-* Informal documents
+* Informal Analysis
     * information requests
     * preliminary analyses
-* Online Content
+* Online
     * web/intranet
     * Stats NZ
 * User Interaction
@@ -79,7 +92,21 @@ Content-Transfer-Encoding: 7bit\\
     <TITLE>Weekly Report</TITLE>
 
 ### Data Transfer (web)
-
+    /// <summary>
+    /// This returns true if this control is supposed
+    /// to be doing anything at all for this request.
+    /// Richard thought it was a good idea to load
+    /// the entire website during every request and
+    /// have things turn themselves off. He also
+    /// thought bandanas and aviator sunglasses were
+    /// "freakin' gnarly, dude."
+    /// </summary>
+    protected bool
+    IsThisTheRightPageImNotSureBecauseRichardIsDumb()
+    {
+    return Request.QueryString["Section"] ==
+        this.MenuItemKey;
+    }
 
 ### Integrity
 

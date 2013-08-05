@@ -5,20 +5,22 @@ opts_chunk$set(fig.cap = "")
 require(reshape2)
 require(ggplot2)
 require(stinepack)
+require(scales)
 ```
 
 ### Slide 1
-```{r gasDecompose, echo = FALSE, fig.width = 4, fig.height = 3, cache = TRUE}
-# function for ggplot equivalent of decompose on a timeseries
-decomp <- function(series,frequency){ 
-    x <- na.stinterp(series)  #this is for interpolation 
-    x1 <- ts(x,start=01,freq=frequency) #converting into a ts object
-    x2 <- stl(x1,s.window="periodic") #performing stl on the ts object
-    x3 <- data.frame(x,x2$time.series) #creating a data.frame
-    x3$index <- index(x3) #create an id 
-    colnames(x3)[1] <- "time-series"  
-    x4 <- melt(x3,id.vars="index")   #melt the dataframe into long format  
-    ggplot(x4,aes(index,value,group=variable)) + geom_line(alpha=0.7) + facet_grid(variable ~., scales="free")  + xlab("Timesteps") + ylab("values") + theme(axis.text = element_blank(), axis.ticks = element_blank())
-}
-decomp(as.numeric(gas), 12)
-```
+    /// <summary>
+    /// This returns true if this control is supposed
+    /// to be doing anything at all for this request.
+    /// Richard thought it was a good idea to load
+    /// the entire website during every request and
+    /// have things turn themselves off. He also
+    /// thought bandanas and aviator sunglasses were
+    /// "fuckin' gnarly, dude."
+    /// </summary>
+    protected bool
+    IsThisTheRightPageImNotSureBecauseRichardIsDumb()
+    {
+    return Request.QueryString["Section"] ==
+        this.MenuItemKey;
+    }
