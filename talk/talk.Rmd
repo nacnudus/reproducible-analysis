@@ -18,6 +18,7 @@ require(stinepack) # for ggplot equivalent of decompose
 
 ### Tail Wags Dog
 
+
 ### Aims
 * Reproducibility
     * efficiency
@@ -71,17 +72,20 @@ require(stinepack) # for ggplot equivalent of decompose
 Received: by 10.141.132.10 with HTTP; Fri, 27 Feb 2013 22:18:46 -0800 (PST)\\
 Date: Sat, 28 Feb 2009 19:18:46 +1300\\
 Delivered-To: nacnudus@gmail.com\\
-Message-ID: <646bfbfc0902272218k33f818a0n257983794298ae74@mail.gmail.com>\\
+Message-ID: 646bfbfc0902272218k33f818a0n257983794298ae74@mail.gmail.com\\
 Subject: A good joke\\
-From: Duncan Garmonsway <obfuscated1@gmail.com>\\
-To: Harold Garmonsway <obfuscated2@gmail.com>\\
+From: Duncan Garmonsway obfuscated1@gmail.com\\
+To: Harold Garmonsway obfuscated2@gmail.com\\
 Content-Type: multipart/alternative; boundary=000e0cd29660dd3ae20463f48edd\\
 --000e0cd29660dd3ae20463f48edd\\
 Content-Type: text/plain; charset=ISO-8859-1\\
 Content-Transfer-Encoding: 7bit\\
 \vspace*{2\baselineskip}}
 \small{Shakespeare on Excel:
-=OR(B2,NOT(B2))}
+=OR(B2,NOT(B2))
+more funnies:
+div dir="ltr" a href="here" http://www.jokes.com/ a br /div
+}
 
 ### Data Transfer (application)
     <META HTTP-EQUIV="Content-Type"
@@ -109,27 +113,37 @@ Content-Transfer-Encoding: 7bit\\
     }
 
 ### Integrity
+\includegraphics[width=4in]{figures/ExcelError.png}
 
 ## Version Control
+### Version Control
 
 ### Diff
 \includegraphics[width=4in]{figures/diff.png}
 
 ### Folder Structure
-### Diff Tree
+\includegraphics[width=4in]{figures/folderTree.png}
 
+### Diff Tree
+\includegraphics[width=4in]{figures/diffTree.png}
 
 # Workflow
 
 ## LCFD
 
 ### LCFD
+Least Commonly Fouled-Up Data
+
+* Load
+* Clean
+* Function
+* Do
 
 ## Load
-
-### Local File
-### Database
-### Web
+### Load
+* Local File
+* Database
+* Web
 
 ## Clean
 
@@ -278,7 +292,7 @@ p
 ### Documentation
 
 ### Collaboration (support)
-"The third problem in your code is, you are print()ing plots from R base graphics. Sigh. Printing base graphics does not make any sense."
+"The third problem in your code is, you are printing plots from R base graphics. Sigh. Printing base graphics does not make any sense."
 
 ### Pace of Development
 ```{r packages, echo = FALSE, fig.width = 4, fig.height = 3, cache = TRUE}
