@@ -1,0 +1,267 @@
+"COUNT","Crash Hour","Weekend Weekday","Worst Inj. F/I/N","Alcohol/drugs","Urban Open Road"
+1,00,Not weekend,Fatal Accident,Alcohol/drugs,Openroad
+2,00,Not weekend,Fatal Accident,Alcohol/drugs,Urban
+3,00,Not weekend,Injury Accident,Alcohol/drugs,Urban
+2,00,Not weekend,Injury Accident,Not alcohol/drugs,Openroad
+3,00,Weekend,Fatal Accident,Alcohol/drugs,Openroad
+1,00,Weekend,Fatal Accident,Not alcohol/drugs,Urban
+5,00,Weekend,Injury Accident,Alcohol/drugs,Openroad
+4,00,Weekend,Injury Accident,Alcohol/drugs,Urban
+4,00,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+1,00,Weekend,Injury Accident,Not alcohol/drugs,Urban
+2,01,Not weekend,Fatal Accident,Alcohol/drugs,Openroad
+3,01,Not weekend,Fatal Accident,Alcohol/drugs,Urban
+2,01,Not weekend,Injury Accident,Alcohol/drugs,Openroad
+3,01,Not weekend,Injury Accident,Alcohol/drugs,Urban
+4,01,Not weekend,Injury Accident,Not alcohol/drugs,Openroad
+2,01,Weekend,Fatal Accident,Alcohol/drugs,Openroad
+1,01,Weekend,Fatal Accident,Not alcohol/drugs,Openroad
+5,01,Weekend,Injury Accident,Alcohol/drugs,Openroad
+2,01,Weekend,Injury Accident,Alcohol/drugs,Urban
+2,01,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+1,01,Weekend,Injury Accident,Not alcohol/drugs,Urban
+1,02,Not weekend,Fatal Accident,Alcohol/drugs,Urban
+1,02,Not weekend,Fatal Accident,Not alcohol/drugs,Openroad
+3,02,Not weekend,Injury Accident,Alcohol/drugs,Openroad
+1,02,Not weekend,Injury Accident,Alcohol/drugs,Urban
+1,02,Weekend,Fatal Accident,Alcohol/drugs,Openroad
+2,02,Weekend,Fatal Accident,Not alcohol/drugs,Openroad
+5,02,Weekend,Injury Accident,Alcohol/drugs,Openroad
+6,02,Weekend,Injury Accident,Alcohol/drugs,Urban
+1,02,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+2,03,Not weekend,Injury Accident,Alcohol/drugs,Openroad
+1,03,Weekend,Fatal Accident,Alcohol/drugs,Openroad
+1,03,Weekend,Fatal Accident,Not alcohol/drugs,Urban
+3,03,Weekend,Injury Accident,Alcohol/drugs,Openroad
+5,03,Weekend,Injury Accident,Alcohol/drugs,Urban
+1,03,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+3,03,Weekend,Injury Accident,Not alcohol/drugs,Urban
+1,04,Not weekend,Fatal Accident,Alcohol/drugs,Openroad
+2,04,Not weekend,Fatal Accident,Not alcohol/drugs,Openroad
+2,04,Not weekend,Injury Accident,Alcohol/drugs,Openroad
+3,04,Not weekend,Injury Accident,Not alcohol/drugs,Openroad
+1,04,Not weekend,Injury Accident,Not alcohol/drugs,Urban
+4,04,Weekend,Fatal Accident,Not alcohol/drugs,Openroad
+4,04,Weekend,Injury Accident,Alcohol/drugs,Openroad
+1,04,Weekend,Injury Accident,Alcohol/drugs,Urban
+7,04,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+2,04,Weekend,Injury Accident,Not alcohol/drugs,Urban
+1,05,Not weekend,Fatal Accident,Alcohol/drugs,Urban
+1,05,Not weekend,Fatal Accident,Not alcohol/drugs,Openroad
+1,05,Not weekend,Fatal Accident,Not alcohol/drugs,Urban
+2,05,Not weekend,Injury Accident,Alcohol/drugs,Openroad
+1,05,Not weekend,Injury Accident,Alcohol/drugs,Urban
+5,05,Not weekend,Injury Accident,Not alcohol/drugs,Openroad
+2,05,Not weekend,Injury Accident,Not alcohol/drugs,Urban
+1,05,Weekend,Fatal Accident,Alcohol/drugs,Openroad
+2,05,Weekend,Fatal Accident,Not alcohol/drugs,Openroad
+3,05,Weekend,Injury Accident,Alcohol/drugs,Openroad
+1,05,Weekend,Injury Accident,Alcohol/drugs,Urban
+1,05,Weekend,Injury Accident,Not alcohol/drugs,Urban
+2,06,Not weekend,Injury Accident,Alcohol/drugs,Openroad
+1,06,Not weekend,Injury Accident,Alcohol/drugs,Urban
+7,06,Not weekend,Injury Accident,Not alcohol/drugs,Openroad
+8,06,Not weekend,Injury Accident,Not alcohol/drugs,Urban
+2,06,Weekend,Fatal Accident,Alcohol/drugs,Openroad
+1,06,Weekend,Injury Accident,Alcohol/drugs,Openroad
+1,06,Weekend,Injury Accident,Alcohol/drugs,Urban
+1,06,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+3,07,Not weekend,Fatal Accident,Not alcohol/drugs,Openroad
+2,07,Not weekend,Injury Accident,Alcohol/drugs,Openroad
+19,07,Not weekend,Injury Accident,Not alcohol/drugs,Openroad
+15,07,Not weekend,Injury Accident,Not alcohol/drugs,Urban
+2,07,Weekend,Fatal Accident,Not alcohol/drugs,Openroad
+1,07,Weekend,Injury Accident,Alcohol/drugs,Openroad
+6,07,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+2,07,Weekend,Injury Accident,Not alcohol/drugs,Urban
+3,08,Not weekend,Fatal Accident,Not alcohol/drugs,Openroad
+2,08,Not weekend,Fatal Accident,Not alcohol/drugs,Urban
+1,08,Not weekend,Injury Accident,Alcohol/drugs,Urban
+19,08,Not weekend,Injury Accident,Not alcohol/drugs,Openroad
+22,08,Not weekend,Injury Accident,Not alcohol/drugs,Urban
+1,08,Weekend,Fatal Accident,Alcohol/drugs,Urban
+1,08,Weekend,Fatal Accident,Not alcohol/drugs,Openroad
+1,08,Weekend,Fatal Accident,Not alcohol/drugs,Urban
+1,08,Weekend,Injury Accident,Alcohol/drugs,Openroad
+1,08,Weekend,Injury Accident,Alcohol/drugs,Urban
+7,08,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+2,08,Weekend,Injury Accident,Not alcohol/drugs,Urban
+2,09,Not weekend,Fatal Accident,Not alcohol/drugs,Openroad
+1,09,Not weekend,Fatal Accident,Not alcohol/drugs,Urban
+2,09,Not weekend,Injury Accident,Alcohol/drugs,Openroad
+2,09,Not weekend,Injury Accident,Alcohol/drugs,Urban
+13,09,Not weekend,Injury Accident,Not alcohol/drugs,Openroad
+7,09,Not weekend,Injury Accident,Not alcohol/drugs,Urban
+7,09,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+4,09,Weekend,Injury Accident,Not alcohol/drugs,Urban
+5,10,Not weekend,Fatal Accident,Not alcohol/drugs,Openroad
+1,10,Not weekend,Fatal Accident,Not alcohol/drugs,Urban
+2,10,Not weekend,Injury Accident,Alcohol/drugs,Openroad
+3,10,Not weekend,Injury Accident,Alcohol/drugs,Urban
+20,10,Not weekend,Injury Accident,Not alcohol/drugs,Openroad
+10,10,Not weekend,Injury Accident,Not alcohol/drugs,Urban
+1,10,Weekend,Fatal Accident,Not alcohol/drugs,Openroad
+1,10,Weekend,Injury Accident,Alcohol/drugs,Openroad
+4,10,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+4,10,Weekend,Injury Accident,Not alcohol/drugs,Urban
+2,11,Not weekend,Fatal Accident,Not alcohol/drugs,Openroad
+3,11,Not weekend,Fatal Accident,Not alcohol/drugs,Urban
+17,11,Not weekend,Injury Accident,Not alcohol/drugs,Openroad
+14,11,Not weekend,Injury Accident,Not alcohol/drugs,Urban
+3,11,Weekend,Fatal Accident,Not alcohol/drugs,Openroad
+2,11,Weekend,Injury Accident,Alcohol/drugs,Openroad
+7,11,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+7,11,Weekend,Injury Accident,Not alcohol/drugs,Urban
+1,12,Not weekend,Fatal Accident,Alcohol/drugs,Openroad
+3,12,Not weekend,Fatal Accident,Not alcohol/drugs,Openroad
+1,12,Not weekend,Injury Accident,Alcohol/drugs,Openroad
+2,12,Not weekend,Injury Accident,Alcohol/drugs,Urban
+10,12,Not weekend,Injury Accident,Not alcohol/drugs,Openroad
+13,12,Not weekend,Injury Accident,Not alcohol/drugs,Urban
+5,12,Weekend,Fatal Accident,Not alcohol/drugs,Openroad
+1,12,Weekend,Injury Accident,Alcohol/drugs,Openroad
+9,12,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+10,12,Weekend,Injury Accident,Not alcohol/drugs,Urban
+1,13,Not weekend,Fatal Accident,Alcohol/drugs,Urban
+8,13,Not weekend,Fatal Accident,Not alcohol/drugs,Openroad
+13,13,Not weekend,Injury Accident,Not alcohol/drugs,Openroad
+13,13,Not weekend,Injury Accident,Not alcohol/drugs,Urban
+2,13,Weekend,Fatal Accident,Alcohol/drugs,Openroad
+12,13,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+4,13,Weekend,Injury Accident,Not alcohol/drugs,Urban
+1,14,Not weekend,Fatal Accident,Alcohol/drugs,Openroad
+4,14,Not weekend,Fatal Accident,Not alcohol/drugs,Openroad
+2,14,Not weekend,Fatal Accident,Not alcohol/drugs,Urban
+3,14,Not weekend,Injury Accident,Alcohol/drugs,Openroad
+1,14,Not weekend,Injury Accident,Alcohol/drugs,Urban
+21,14,Not weekend,Injury Accident,Not alcohol/drugs,Openroad
+13,14,Not weekend,Injury Accident,Not alcohol/drugs,Urban
+2,14,Weekend,Fatal Accident,Not alcohol/drugs,Openroad
+1,14,Weekend,Fatal Accident,Not alcohol/drugs,Urban
+2,14,Weekend,Injury Accident,Alcohol/drugs,Openroad
+1,14,Weekend,Injury Accident,Alcohol/drugs,Urban
+10,14,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+12,14,Weekend,Injury Accident,Not alcohol/drugs,Urban
+1,15,Not weekend,Fatal Accident,Alcohol/drugs,Openroad
+3,15,Not weekend,Fatal Accident,Not alcohol/drugs,Openroad
+2,15,Not weekend,Fatal Accident,Not alcohol/drugs,Urban
+6,15,Not weekend,Injury Accident,Alcohol/drugs,Openroad
+1,15,Not weekend,Injury Accident,Alcohol/drugs,Urban
+26,15,Not weekend,Injury Accident,Not alcohol/drugs,Openroad
+26,15,Not weekend,Injury Accident,Not alcohol/drugs,Urban
+4,15,Weekend,Fatal Accident,Not alcohol/drugs,Openroad
+5,15,Weekend,Injury Accident,Alcohol/drugs,Openroad
+10,15,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+6,15,Weekend,Injury Accident,Not alcohol/drugs,Urban
+2,16,Not weekend,Fatal Accident,Alcohol/drugs,Openroad
+5,16,Not weekend,Fatal Accident,Not alcohol/drugs,Openroad
+1,16,Not weekend,Fatal Accident,Not alcohol/drugs,Urban
+2,16,Not weekend,Injury Accident,Alcohol/drugs,Openroad
+1,16,Not weekend,Injury Accident,Alcohol/drugs,Urban
+25,16,Not weekend,Injury Accident,Not alcohol/drugs,Openroad
+24,16,Not weekend,Injury Accident,Not alcohol/drugs,Urban
+1,16,Weekend,Fatal Accident,Alcohol/drugs,Openroad
+1,16,Weekend,Fatal Accident,Alcohol/drugs,Urban
+2,16,Weekend,Fatal Accident,Not alcohol/drugs,Openroad
+5,16,Weekend,Injury Accident,Alcohol/drugs,Openroad
+14,16,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+5,16,Weekend,Injury Accident,Not alcohol/drugs,Urban
+2,17,Not weekend,Fatal Accident,Alcohol/drugs,Openroad
+1,17,Not weekend,Fatal Accident,Alcohol/drugs,Urban
+7,17,Not weekend,Fatal Accident,Not alcohol/drugs,Openroad
+1,17,Not weekend,Fatal Accident,Not alcohol/drugs,Urban
+4,17,Not weekend,Injury Accident,Alcohol/drugs,Openroad
+2,17,Not weekend,Injury Accident,Alcohol/drugs,Urban
+23,17,Not weekend,Injury Accident,Not alcohol/drugs,Openroad
+17,17,Not weekend,Injury Accident,Not alcohol/drugs,Urban
+4,17,Weekend,Fatal Accident,Not alcohol/drugs,Openroad
+1,17,Weekend,Injury Accident,Alcohol/drugs,Openroad
+9,17,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+6,17,Weekend,Injury Accident,Not alcohol/drugs,Urban
+2,18,Not weekend,Fatal Accident,Alcohol/drugs,Openroad
+2,18,Not weekend,Fatal Accident,Not alcohol/drugs,Openroad
+2,18,Not weekend,Injury Accident,Alcohol/drugs,Openroad
+3,18,Not weekend,Injury Accident,Alcohol/drugs,Urban
+11,18,Not weekend,Injury Accident,Not alcohol/drugs,Openroad
+6,18,Not weekend,Injury Accident,Not alcohol/drugs,Urban
+3,18,Weekend,Fatal Accident,Alcohol/drugs,Openroad
+1,18,Weekend,Fatal Accident,Alcohol/drugs,Urban
+2,18,Weekend,Fatal Accident,Not alcohol/drugs,Openroad
+1,18,Weekend,Fatal Accident,Not alcohol/drugs,Urban
+3,18,Weekend,Injury Accident,Alcohol/drugs,Openroad
+2,18,Weekend,Injury Accident,Alcohol/drugs,Urban
+8,18,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+4,18,Weekend,Injury Accident,Not alcohol/drugs,Urban
+2,19,Not weekend,Fatal Accident,Alcohol/drugs,Openroad
+2,19,Not weekend,Fatal Accident,Not alcohol/drugs,Openroad
+1,19,Not weekend,Fatal Accident,Not alcohol/drugs,Urban
+2,19,Not weekend,Injury Accident,Alcohol/drugs,Openroad
+1,19,Not weekend,Injury Accident,Alcohol/drugs,Urban
+9,19,Not weekend,Injury Accident,Not alcohol/drugs,Openroad
+4,19,Not weekend,Injury Accident,Not alcohol/drugs,Urban
+3,19,Weekend,Fatal Accident,Alcohol/drugs,Openroad
+2,19,Weekend,Fatal Accident,Not alcohol/drugs,Openroad
+3,19,Weekend,Injury Accident,Alcohol/drugs,Openroad
+3,19,Weekend,Injury Accident,Alcohol/drugs,Urban
+7,19,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+5,19,Weekend,Injury Accident,Not alcohol/drugs,Urban
+1,20,Not weekend,Fatal Accident,Alcohol/drugs,Openroad
+1,20,Not weekend,Fatal Accident,Not alcohol/drugs,Openroad
+3,20,Not weekend,Injury Accident,Alcohol/drugs,Openroad
+4,20,Not weekend,Injury Accident,Alcohol/drugs,Urban
+1,20,Not weekend,Injury Accident,Not alcohol/drugs,Openroad
+3,20,Not weekend,Injury Accident,Not alcohol/drugs,Urban
+4,20,Weekend,Fatal Accident,Alcohol/drugs,Openroad
+1,20,Weekend,Fatal Accident,Alcohol/drugs,Urban
+2,20,Weekend,Fatal Accident,Not alcohol/drugs,Openroad
+1,20,Weekend,Fatal Accident,Not alcohol/drugs,Urban
+4,20,Weekend,Injury Accident,Alcohol/drugs,Openroad
+2,20,Weekend,Injury Accident,Alcohol/drugs,Urban
+6,20,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+4,20,Weekend,Injury Accident,Not alcohol/drugs,Urban
+3,21,Not weekend,Fatal Accident,Alcohol/drugs,Openroad
+1,21,Not weekend,Fatal Accident,Alcohol/drugs,Urban
+2,21,Not weekend,Fatal Accident,Not alcohol/drugs,Openroad
+2,21,Not weekend,Injury Accident,Alcohol/drugs,Openroad
+2,21,Not weekend,Injury Accident,Alcohol/drugs,Urban
+2,21,Not weekend,Injury Accident,Not alcohol/drugs,Openroad
+6,21,Not weekend,Injury Accident,Not alcohol/drugs,Urban
+2,21,Weekend,Fatal Accident,Not alcohol/drugs,Openroad
+2,21,Weekend,Fatal Accident,Not alcohol/drugs,Urban
+4,21,Weekend,Injury Accident,Alcohol/drugs,Openroad
+4,21,Weekend,Injury Accident,Alcohol/drugs,Urban
+5,21,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+2,21,Weekend,Injury Accident,Not alcohol/drugs,Urban
+1,22,Not weekend,Fatal Accident,Alcohol/drugs,Openroad
+1,22,Not weekend,Fatal Accident,Not alcohol/drugs,Openroad
+4,22,Not weekend,Injury Accident,Alcohol/drugs,Openroad
+5,22,Not weekend,Injury Accident,Alcohol/drugs,Urban
+2,22,Not weekend,Injury Accident,Not alcohol/drugs,Openroad
+2,22,Not weekend,Injury Accident,Not alcohol/drugs,Urban
+2,22,Weekend,Fatal Accident,Alcohol/drugs,Openroad
+1,22,Weekend,Fatal Accident,Alcohol/drugs,Urban
+1,22,Weekend,Fatal Accident,Not alcohol/drugs,Openroad
+2,22,Weekend,Injury Accident,Alcohol/drugs,Openroad
+3,22,Weekend,Injury Accident,Alcohol/drugs,Urban
+1,22,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+3,22,Weekend,Injury Accident,Not alcohol/drugs,Urban
+2,23,Not weekend,Fatal Accident,Alcohol/drugs,Openroad
+2,23,Not weekend,Injury Accident,Alcohol/drugs,Openroad
+3,23,Not weekend,Injury Accident,Alcohol/drugs,Urban
+2,23,Not weekend,Injury Accident,Not alcohol/drugs,Openroad
+3,23,Weekend,Fatal Accident,Alcohol/drugs,Openroad
+1,23,Weekend,Fatal Accident,Not alcohol/drugs,Openroad
+2,23,Weekend,Fatal Accident,Not alcohol/drugs,Urban
+6,23,Weekend,Injury Accident,Alcohol/drugs,Openroad
+1,23,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+3,23,Weekend,Injury Accident,Not alcohol/drugs,Urban
+1,No hours,Not weekend,Fatal Accident,Alcohol/drugs,Openroad
+2,No hours,Not weekend,Injury Accident,Alcohol/drugs,Openroad
+1,No hours,Not weekend,Injury Accident,Alcohol/drugs,Urban
+3,No hours,Not weekend,Injury Accident,Not alcohol/drugs,Openroad
+2,No hours,Not weekend,Injury Accident,Not alcohol/drugs,Urban
+1,No hours,Weekend,Fatal Accident,Alcohol/drugs,Openroad
+1,No hours,Weekend,Fatal Accident,Not alcohol/drugs,Openroad
+2,No hours,Weekend,Injury Accident,Alcohol/drugs,Openroad
+3,No hours,Weekend,Injury Accident,Not alcohol/drugs,Openroad
+4,No hours,Weekend,Injury Accident,Not alcohol/drugs,Urban
