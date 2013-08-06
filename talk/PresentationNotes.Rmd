@@ -1,6 +1,12 @@
 reproducible-analysis
 =====================
 
+Build
+-----
+```
+knit("talk.Rmd"); system("pandoc -t beamer --slide-level 3 talk.md -o talk.tex"); system("pdflatex handoutNotes.tex"); system("pdflatex lectureNotes.tex")
+```
+
 Reproducible analysis using the R stack (R/RStudio/Markdown/Latex/Knitr/Beamer/Slidy/Shiny/etc.)
 
 Define objective
@@ -59,7 +65,7 @@ which includes dead packages.  DONE.  Data problems - some available packages no
 * knitr: <http://yihui.name/knitr/>
 * LaTeX: <http://tex.stackexchange.com/>
 * Version Control for Data Analysts: <http://stackoverflow.com/questions/2712421/>
-
+* Handout Notes: <http://www.guidodiepen.nl/2009/07/creating-latex-beamer-handouts-with-notes/>
 
 
 # Introduction
