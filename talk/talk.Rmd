@@ -1,4 +1,5 @@
 ```{r setup, include=FALSE}
+opts_chunk$set(cache = TRUE)
 opts_chunk$set(tidy = FALSE) # preserve wrapped code
 opts_chunk$set(dev = 'pdf') # size plots better
 opts_chunk$set(fig.cap = "")
@@ -14,60 +15,32 @@ require(maps)
 require(stinepack) # for ggplot equivalent of decompose
 ```
 
-# Introduction
+# Why You Should Care
 
-### Tail Wags Dog
+#### Redo This Thing
+"Just redo this spreadsheet we already did, to answer this OIA."
 
 
-### Aims
-* Reproducibility
-    * efficiency
-    * extensibility
-* Accuracy
-    * verify action against intention
-    * review choices
-* Communication
-    * collaboration
-    * trustworthiness
+### Reproducibility?
+#### Record of the data
+#### Record of the analysis
+#### Record of the presentation
 
-\small{This slide based on Jeromy Anglim https://github.com/jeromyanglim/rmarkdown-rmeetup-2012}
+### Reproducibility
+#### Accurate
+#### Transparent
+#### Efficient
 
-### Scale of Problem
-* Publications
-    * papers
-    * reports
-    * OIAs
-* Informal Analysis
-    * information requests
-    * preliminary analyses
-* Online
-    * web/intranet
-    * Stats NZ
-* User Interaction
-    * interactive charts
-    * online forms
+### Impact
+#### High volume
+#### High impact
+#### Achievable
 
-### Put It in an Email
-* Text
-* Workflow
-* Toolchain
+# You Can Do It
 
-# Text
+## Text
 
-## Human-Readable
-### Human-Readable
-
-### Database
-    CustomerID varchar(5) NOT NULL,  
-    CompanyName varchar(40) NOT NULL,  
-    ContactName varchar(30),  
-    ContactTitle varchar(30),  
-    Address varchar(60)  
-    City varchar(15),  
-    Region varchar(15),  
-    PostalCode varchar(10),  
-
-### Data Transfer (email)
+### Text Files
 \scriptsize{MIME-Version: 1.0\\
 Received: by 10.141.132.10 with HTTP; Fri, 27 Feb 2013 22:18:46 -0800 (PST)\\
 Date: Sat, 28 Feb 2009 19:18:46 +1300\\
@@ -87,36 +60,39 @@ more funnies:
 div dir="ltr" a href="here" http://www.jokes.com/ a br /div
 }
 
-### Data Transfer (application)
-    <META HTTP-EQUIV="Content-Type"
-        CONTENT="text/html; charset=iso-8859-1">
-    <META NAME="Generator" 
-        CONTENT="MS Exchange Server 
-        version 08.02.0254.000">
-    <TITLE>Weekly Report</TITLE>
+### Text Files
+* Instructions
+* 
+\scriptsize{MIME-Version: 1.0\\
+Received: by 10.141.132.10 with HTTP; Fri, 27 Feb 2013 22:18:46 -0800 (PST)\\
+Date: Sat, 28 Feb 2009 19:18:46 +1300\\
+Delivered-To: nacnudus@gmail.com\\
+Message-ID: 646bfbfc0902272218k33f818a0n257983794298ae74@mail.gmail.com\\
+Subject: A good joke\\
+From: Duncan Garmonsway obfuscated1@gmail.com\\
+To: Harold Garmonsway obfuscated2@gmail.com\\
+Content-Type: multipart/alternative; boundary=000e0cd29660dd3ae20463f48edd\\
+--000e0cd29660dd3ae20463f48edd\\
+Content-Type: text/plain; charset=ISO-8859-1\\
+Content-Transfer-Encoding: 7bit\\
+\vspace*{2\baselineskip}}
 
-### Data Transfer (web)
-    /// <summary>
-    /// This returns true if this control is supposed
-    /// to be doing anything at all for this request.
-    /// Richard thought it was a good idea to load
-    /// the entire website during every request and
-    /// have things turn themselves off. He also
-    /// thought bandanas and aviator sunglasses were
-    /// "freakin' gnarly, dude."
-    /// </summary>
-    protected bool
-    IsThisTheRightPageImNotSureBecauseRichardIsDumb()
-    {
-    return Request.QueryString["Section"] ==
-        this.MenuItemKey;
-    }
+* Database
+* 
+\small{Shakespeare on Excel:
+=OR(B2,NOT(B2))
+more funnies:
+div dir="ltr" a href="here" http://www.jokes.com/ a br /div
+}
 
-### Integrity
+### Plot
+```{r simplePlot, warning = FALSE, fig.width = 4, fig.height = 3}
+plot(x = c(1, 2, 3, 4, 5),
+     y = c(10, 20, 15, 8, 2), type = "line")
+```
+
+### Where's the error?
 \includegraphics[width=4in]{figures/ExcelError.png}
-
-## Version Control
-### Version Control
 
 ### Diff
 \includegraphics[width=4in]{figures/diff.png}
@@ -127,37 +103,81 @@ div dir="ltr" a href="here" http://www.jokes.com/ a br /div
 ### Diff Tree
 \includegraphics[width=4in]{figures/diffTree.png}
 
-# Workflow
+# Do The Magic
 
-## LCFD
+## Workflow
 
 ### LCFD
-Least Commonly Fouled-Up Data
 
-* Load
-* Clean
-* Function
-* Do
+#### Least Commonly Fouled-up Data
 
-## Load
+#### Load
+#### Clean
+#### Function
+#### Do
+
+
 ### Load
-* Local File
-* Database
-* Web
+#### From a text file
+`mydata = read.table("mydata.txt")`
 
-## Clean
+#### From a database
+`mydata <- sqldf("SELECT * FROM School", dbname = "Test2.sqlite")`
 
-### Pivot
-### Impossible Pivot
-### Re-Coding
+#### From the web
+`dminit("4b3320aa36214e35a7d0c6c175a1ff98")`
 
-## Functions
+`mydata <- dmlist("22ry")`
 
-### Pivot (again)
-### Plot
+#### From other statistical packages
+`mydata <- read.xls("mydata.xls")`
 
-## Do
+`mydata <- read.spss("myfile")`
 
+
+### Clean
+`x <- read.csv("data.csv")`
+
+      COUNT HOUR     WEEKEND
+          1    1 Not weekend
+          2    1 Not weekend
+          3    1 Not weekend
+          2    1 Not weekend
+          3    1     Weekend
+          1    1     Weekend
+
+### Clean
+```
+y <- dcast(x, hour ~ weekend,
+  sum, value.var = "count")
+```
+
+          HOUR NOT WEEKEND WEEKEND
+             1           4       6
+             2           5       6
+             3           4       5
+             4           1       6
+             5           5       5
+             6           7       5
+
+### Function
+```
+myFunction <- function(z){
+ dcast(z, hour ~ weekend, sum, value.var = "count")
+}
+
+y <- myFunction(x)
+a <- myFunction(b)
+```
+
+## Magic
+
+### Facet
+    Give me the number of crashes by the hour of the day.
+    Also by whether it's the weekend.
+    Also by urban/rural.
+    Also by drink/drug or not.
+    
 ### Facet
 ```{r bayOfPlenty, echo = FALSE, fig.width = 4, fig.height = 3}
 x <- read.csv("BoP.csv", header = TRUE)
@@ -178,18 +198,13 @@ ggplot(y, aes(hour, group = weekend, fill = weekend)) +
   theme(axis.text.y = element_blank(), axis.ticks.y = element_blank())
 ```
 
-### Map
-```{r map, fig.width = 4, fig.height = 2.8}
-map("nz", mar = c(0,0,0,0))
-```
-
 ### Forecast
-```{r gas, echo = FALSE, fig.width = 4, fig.height = 3.5, cache = TRUE}
+```{r gas, echo = FALSE, fig.width = 4, fig.height = 3.5}
 plot(forecast(gas), main = "Australian monthly gas production")
 ```
 
 ### Decompose
-```{r gasDecompose, echo = FALSE, fig.width = 4, fig.height = 3, cache = TRUE}
+```{r gasDecompose, echo = FALSE, fig.width = 4, fig.height = 3}
 # function for ggplot equivalent of decompose on a timeseries
 decomp <- function(series,frequency){ 
     x <- na.stinterp(series)  #this is for interpolation 
@@ -258,44 +273,26 @@ p <- p + geom_line(aes(Year, Production), annual[34:38, ], colour = "darkgreen")
 p
 ```
 
-### Cluster
+### Map
+```{r map, fig.width = 4, fig.height = 2.8}
+map("nz", mar = c(0,0,0,0))
+```
 
-# Toolchain
 
-## Database
+# Be Amongst the Best
 
-### Scale
-### Workspace
+### Developers
+```{r echo = FALSE, results='asis'}
+x <- read.csv("maintainersShort.txt", header = FALSE)
+colnames(x) <- c("Maintainer", "Position", "University")
+print(xtable(x), size = "\\tiny", comment = FALSE)
+```
 
-## Programming Language
-
-### Languages
-* R
-* SAS
-* SPSS
-* S Plus
-
-`cell_value = SUM(1, 2, 3)`
-  
-`variable <- sum(1, 2, 3)`
-
-### Extensibility
-
-## Presentation
-
-### Paper
-### Shiny
-### Slidify
-
-## Open Source
-
-### Documentation
-
-### Collaboration (support)
+### Users (support)
 "The third problem in your code is, you are printing plots from R base graphics. Sigh. Printing base graphics does not make any sense."
 
 ### Pace of Development
-```{r packages, echo = FALSE, fig.width = 4, fig.height = 3, cache = TRUE}
+```{r packages, echo = FALSE, fig.width = 4, fig.height = 3}
 # adapted from http://blog.revolutionanalytics.com/2013/05/how-r-grows.html for packages and maintainers
 url <- "http://cran.r-project.org/web/packages/available_packages_by_date.html"
 page <- readHTMLTable(url, stringsAsFactors = FALSE)[[1]]
@@ -308,13 +305,6 @@ barP + geom_bar(fill=cbbPalette) +
   labs(title = "Available Packages") +
   ylab("Number") +
   xlab("Year of Last Update")
-```
-
-### Developers
-```{r echo = FALSE, results='asis'}
-x <- read.csv("maintainersShort.txt", header = FALSE)
-colnames(x) <- c("Maintainer", "Position", "University")
-print(xtable(x), size = "\\tiny", comment = FALSE)
 ```
 
 ### Thank You

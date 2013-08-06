@@ -13,11 +13,8 @@ The induction programme into all my analysis jobs has been the same.
 Okay, that's good.  OIAs, they're in the eye of the media, and they're one of the fundemental elements of a free, democratic society, so it's probably all right if I mess this up a bit.  So I look at the spreadsheet that they already did that I'm going to copy.  And let's say I'm working for the Police at this point, because I've already found that the Police get things more right than some other agencies.  So I think, good, this piece of analysis is *reproducible*.  What do I mean?
 
 ### Reproducibility?
-
 #### Record of the data
-
 #### Record of the analysis
-
 #### Record of the presentation
 
 All I have to do is look at the data and get the up-to-date version.  Then I look at how the analysis was done, and do it again on the new data.  Finally I look at how the analysis was presented, and I copy the relevent bits of data and analysis into a new version of the presentation and send it off.  So that was reproducible analysis, wasn't it?
@@ -31,11 +28,8 @@ Once I've sorted out all the data, and all the analysis, and I get to the presen
 Finally I send out the presentation, and straight away I get an email back that says, "Hey, that was the March presentation.  This is April".  What have I done?  I've forgotten to change the title at the top.  Or if it's going to Joe Public, Joe Public writes back to complain that, in order to exercise his democratic right to information, he has to buy spreadsheet software from an American business.
 
 ### Reproducibility
-
 #### Accurate
-
 #### Transparent
-
 #### Efficient
 
 So is that really reproducible analysis?  No.  Is it easy?  Well, sort of.  Is it accurate?  Most of the time.  Is it transparent?  To some extent.  Can anyone outside the immediate team understand it?  Probably not.  Can a lazy person repeat it at a click of a button?  Definitely not.
@@ -43,11 +37,8 @@ So is that really reproducible analysis?  No.  Is it easy?  Well, sort of.  Is i
 Obviously there is room for improvement.  That's going to take some effort.  Is it worth it?
 
 ### Impact
-
 #### High volume
-
 #### High impact
-
 #### Achievable
 
 Doing real reproducible analysis would impact on all our work, increase our credibility under scrutiny, and we can already do it.
@@ -65,18 +56,14 @@ If you've have used email today, you already know how to do reproducible analysi
 ### Text Files
 (email)
 
-This is an email as it appears to a computer.  At first glance it looks like gobbledegook, but we're all smart, technical people, and with a bit of effort we can still read it.  There's the date, there's who it was sent from, and my email address.  There's who it was sent to, and my brother's email address.  Here's the content of the email---I've sent my brother a hilarious Excel joke, and a link to a funny website.
 
 There's some more gobbledegook, but if we were experts in emails we would be able to understand that.  It isn't ones and zeros.  It's human-readable text.  If the computer broke and all it gave us was this text, we could still read it.
 
 How does it work?
 
-### Email Analysis
-
+### Text Files
 #### Instructions
-
 #### Database
-
 #### Presentation...
 
 This text is a database, a computer program, and is presentation-ready.
@@ -101,6 +88,9 @@ This is a text file - just one line of text - that draws the graph.  Everything 
 So we've done it?  End of presentation?  Not yet.  Now that we're using text, let's see what else we can do.
 
 What if I tweaked my presentation a bit for next time.  What if I wanted to make the graph a bit taller?  If I were using Powerpoint and Excel then I'd resize the graph in Excel, copy it over the top of the old one in Powerpoint, and save it as My Presentation V2.ppt.  Then someone wants to know what changed between the versions, because they're terrified that the numbers have changed, so they go and check all the numbers in the presentation, by eye.  I know what you're thinking, you're thinking, "What about track changes?".  Um, show me where that button is on the Excel ribbon.
+
+### Where's the error?
+\includegraphics[width=4in]{figures/ExcelError.png}
 
 Tracked changes doesn't work on spreadsheets.  It works really well on text files.
 
@@ -172,26 +162,25 @@ The database connections understand SQL, which is a language specifically for re
 ### Clean
 `x <- read.csv("data.csv")`
 
-| count | hour  |  weekend
-| ----- | ----- | --------
-|1      |1      |Not weekend
-|2      |1      |Not weekend
-|3      |1      |Not weekend
-|2      |1      |Not weekend
-|3      |1      |   Weekend
-|1      |1      |   Weekend
+      COUNT HOUR     WEEKEND
+          1    1 Not weekend
+          2    1 Not weekend
+          3    1 Not weekend
+          2    1 Not weekend
+          3    1     Weekend
+          1    1     Weekend
 
 ### Clean
-`y <- dcast(x, hour ~ weekend, sum, value.var = "count")`
+`y <- dcast(x, hour~weekend, sum, value.var = "count")`
 
-hour| Not weekend| Weekend
---- | ---------- | -------
-1|           8|      18
-2|          14|      13
-3|           6|      15
-4|           2|      14
-5|           9|      18
-6|          13|       8
+          HOUR NOT WEEKEND WEEKEND
+             1           4       6
+             2           5       6
+             3           4       5
+             4           1       6
+             5           5       5
+             6           7       5
+
 
 You can see in the first slide that there were eight crashes during the first hour of both days of the weekend.  In the second slide these have been added up.  People say R is hard.  The equivalent in Excel would either be screeds of formulae to cover every possible option, or a pivot table, and we know what a pain it is to maintain pivots.
 
