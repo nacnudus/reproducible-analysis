@@ -20,3 +20,8 @@ Example:
 ```
 git clone https://github.com/jeromyanglim/rmarkdown-rmeetup-2012.git
 ```
+
+Build the talk with
+```
+knit("talk.Rmd"); system("pandoc -t beamer talk.md -o talk.tex"); system("pdflatex main.tex"); system("pdflatex handoutNotes.tex"); system("pdflatex lectureNotes.tex")
+```

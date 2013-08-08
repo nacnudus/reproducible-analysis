@@ -1,37 +1,9 @@
-\note{\tiny{All I have to do is look at the data and get the up-to-date version.  Then I look at how the analysis was done, and do it again on the new data.  Finally I look at how the analysis was presented, and I copy the relevent bits of data and analysis into a new version of the presentation and send it off.  So that was reproducible analysis, wasn't it?
+# The Competition
+\includegraphics[width=4in]{figures/jobgraph.png}
 
-Nope.  When I try to get the up-to-date data, I get slightly different numbers, because it turns out there was a little bit of tweaking done between the database and the spreadsheet.  And then a bit more tweaking done in the spreadsheet, saved over the top.
+\note{\tiny{This chart is a guestimate of jobs advertised for R versus the proprietary industry standard, SAS.  I won't read too much into this, except to point out that SAS has been having a tough couple of years, whereas R has never had it better.  It's surprising that SAS is trending down, given that the last couple of years has seen the rise of terms like "big data" and "data science" in the business world.  "Data science" is a fancy term for data analysis with connotations of doing the analysis better than we usually do.  "Big data" refers to, surprisingly, very large amounts of data, usually sales data or website clicks data---much larger datasets than the Police uses.  Now, SAS salespeople tend to claim that R can't handle big data, whereas SAS can.  If that were the case, you'd think that SAS would be doing really well now that big data is fashionable and available.  And you'd expect that R wouldn't be making any gains.}}
 
-Then the analysis isn't quite consistent.  There's a column of formulae that I assume are all the same, except that one of the formulae part-way down is slightly different to cover a special case in the data.  And there's nothing to explain what the special case is, or how the formula handles it.  And anyway, the up-to-date data has a couple more special cases that need to be handled in the same way, which means I need to type that special formula in somewhere else, too.
+# The Competition
+\includegraphics[width=4in]{figures/jobgraph2.png}
 
-Once I've sorted out all the data, and all the analysis, and I get to the presentation.  I copy the relevant bit from the analysis and paste it into the report, or the powerpoint, or whatever it is, and it doesn't fit.  It's too big now.  So I spend forever adjusting everything to fit.
-
-Finally I send out the presentation, and straight away I get an email back that says, "Hey, that was the March presentation.  This is April".  What have I done?  I've forgotten to change the title at the top.  Or if it's going to Joe Public, Joe Public writes back to complain that, in order to exercise his democratic right to information, he has to buy spreadsheet software from an American business.}}
-
-### Clean
-
-Slide text.
-
-\note{\tiny{All I have to do is look at the data and get the up-to-date version.  Then I look at how the analysis was done, and do it again on the new data.  Finally I look at how the analysis was presented, and I copy the relevent bits of data and analysis into a new version of the presentation and send it off.  So that was reproducible analysis, wasn't it?
-
-Nope.  When I try to get the up-to-date data, I get slightly different numbers, because it turns out there was a little bit of tweaking done between the database and the spreadsheet.  And then a bit more tweaking done in the spreadsheet, saved over the top.
-
-Then the analysis isn't quite consistent.  There's a column of formulae that I assume are all the same, except that one of the formulae part-way down is slightly different to cover a special case in the data.  And there's nothing to explain what the special case is, or how the formula handles it.  And anyway, the up-to-date data has a couple more special cases that need to be handled in the same way, which means I need to type that special formula in somewhere else, too.
-
-Once I've sorted out all the data, and all the analysis, and I get to the presentation.  I copy the relevant bit from the analysis and paste it into the report, or the powerpoint, or whatever it is, and it doesn't fit.  It's too big now.  So I spend forever adjusting everything to fit.
-
-Finally I send out the presentation, and straight away I get an email back that says, "Hey, that was the March presentation.  This is April".  What have I done?  I've forgotten to change the title at the top.  Or if it's going to Joe Public, Joe Public writes back to complain that, in order to exercise his democratic right to information, he has to buy spreadsheet software from an American business.}}
-
-### Second Slide
-
-Something Here
-
-\note{\tiny{All I have to do is look at the data and get the up-to-date version.  Then I look at how the analysis was done, and do it again on the new data.  Finally I look at how the analysis was presented, and I copy the relevent bits of data and analysis into a new version of the presentation and send it off.  So that was reproducible analysis, wasn't it?
-
-Nope.  When I try to get the up-to-date data, I get slightly different numbers, because it turns out there was a little bit of tweaking done between the database and the spreadsheet.  And then a bit more tweaking done in the spreadsheet, saved over the top.
-
-Then the analysis isn't quite consistent.  There's a column of formulae that I assume are all the same, except that one of the formulae part-way down is slightly different to cover a special case in the data.  And there's nothing to explain what the special case is, or how the formula handles it.  And anyway, the up-to-date data has a couple more special cases that need to be handled in the same way, which means I need to type that special formula in somewhere else, too.
-
-Once I've sorted out all the data, and all the analysis, and I get to the presentation.  I copy the relevant bit from the analysis and paste it into the report, or the powerpoint, or whatever it is, and it doesn't fit.  It's too big now.  So I spend forever adjusting everything to fit.
-
-Finally I send out the presentation, and straight away I get an email back that says, "Hey, that was the March presentation.  This is April".  What have I done?  I've forgotten to change the title at the top.  Or if it's going to Joe Public, Joe Public writes back to complain that, in order to exercise his democratic right to information, he has to buy spreadsheet software from an American business.}}
+\note{\tiny{Out of interest, I've included SPSS as well.  That's the package that Nils is interested in, and it's one of the main proprietary competitors of SAS.}}
