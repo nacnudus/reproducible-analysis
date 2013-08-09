@@ -90,8 +90,6 @@ Content-Transfer-Encoding: 7bit\\
 \vspace*{2\baselineskip}}
 \small{Shakespeare on Excel:
 =OR(B2,NOT(B2))
-more funnies:
-div dir="ltr" a href="here" http://www.jokes.com/ a br /div
 }
 
 \note{\tiny{There's some gobbledegook, but if we were experts in emails we would be able to understand that.  It isn't ones and zeros.  It's human-readable text.  If the computer broke and all it gave us was this text, we could still read it.
@@ -119,8 +117,6 @@ Content-Transfer-Encoding: 7bit\\
   
 \small{Shakespeare on Excel:
 =OR(B2,NOT(B2))
-more funnies:
-div dir="ltr" a href="here" http://www.jokes.com/ a br /div
 }
 
 \note{\tiny{This text is a database, a computer program, and is presentation-ready.
@@ -249,7 +245,7 @@ y <- dcast(x, hour ~ weekend,
 ```
 
           HOUR NOT WEEKEND WEEKEND
-             1           4       6
+             1           8       4
              2           5       6
              3           4       5
              4           1       6
