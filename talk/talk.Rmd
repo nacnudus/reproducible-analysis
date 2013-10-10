@@ -461,7 +461,7 @@ This graph is actually slightly misleading, and I can use that to illustrate a c
 The major change I made was to label the x-axis "Year of Last Update".  Without that label, you might think that the number of packages available was increasing exponentially.  That might be true, but the graph doesn't show that.  However, the blog where this graph was published interpreted it that way.  Fortunately, because they made their code available to, as a text file, I was able to work out exactly what was going on and correct it.}}
 
 ### The Competition
-\includegraphics[width=4in]{figures/jobgraph.png}
+\includegraphics[width=4in]{figures/jobgraph1.png}
 
 \note{\tiny{This chart is a guestimate of jobs advertised for R versus the proprietary industry standard, SAS.  I won't read too much into this, except to point out that SAS has been having a tough couple of years, whereas R has never had it better.  It's surprising that SAS is trending down, given that the last couple of years has seen the rise of terms like "big data" and "data science" in the business world.  "Data science" is a fancy term for data analysis with connotations of doing the analysis better than we usually do.  "Big data" refers to, surprisingly, very large amounts of data, usually sales data or website clicks data---much larger datasets than the Police uses.  Now, SAS salespeople tend to claim that R can't handle big data, whereas SAS can.  If that were the case, you'd think that SAS would be doing really well now that big data is fashionable and available.  And you'd expect that R wouldn't be making any gains.}}
 

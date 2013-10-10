@@ -25,3 +25,7 @@ Build the talk with
 ```
 knit("talk.Rmd"); system("pandoc -t beamer talk.md -o talk.tex"); system("pdflatex main.tex"); system("pdflatex handoutNotes.tex"); system("pdflatex lectureNotes.tex")
 ```
+
+Sources:
+Jobs graphs from this post at R-Bloggers
+http://www.r-bloggers.com/demand-for-r-jobs-on-the-rise-while-sas-jobs-decline/
